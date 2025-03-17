@@ -9,10 +9,13 @@ body {
 }
 
 header nav {
-    display: inline-block;
+    display: flex;
     justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
     background: linear-gradient(to right, #b91da2, #1bd6cf);
 }
+
 
 header nav .logo img {
     width: 120px;
@@ -21,7 +24,23 @@ header nav .logo img {
     object-fit: cover;
 }
 
-#Novedades h2 {
+.menu {
+    list-style: none;
     display: flex;
-    font-style: #0c0c0c;
+    gap: 20px; /* Espacio entre los elementos */
+}
+
+.menu li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+
+#Novedades h2 {
+    color: #0c0c0c; /* ✅ Ahora el color es correcto */
+    text-align: center;
+    font-size: 24px;
+    font-family: Arial, sans-serif;
 }
