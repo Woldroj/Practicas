@@ -5,3 +5,9 @@ body {
     background-repeat: no-repeat; /* Evita que la imagen se repita */
     display: flex;
 }
+
+.menu {
+    display: inline-block;
+    justify-content: space-between;
+    
+}
