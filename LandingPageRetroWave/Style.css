@@ -22,6 +22,8 @@ header nav .logo img {
     height: 120px;
     border-radius: 50%;
     object-fit: cover;
+    border: 20px solid transparent; /* Define el grosor del borde */
+    border-image: url('Imagenes_Contenido/pixil-frame-0.png') 30 stretch; /* Imagen de borde */
 }
 
 .menu {
