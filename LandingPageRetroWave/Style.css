@@ -1,11 +1,21 @@
+@font-face {
+    font-family: 'Pixel';  
+    src: url('Imagenes_Contenido/8-BIT WONDER.TTF') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
-    background-image: url('Imagenes_Contenido/wmremove-transformed.jpeg'); /* Ruta de la imagen */
-    background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
-    background-position: center; /* Centra la imagen */
-    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    background-image: url('Imagenes_Contenido/wmremove-transformed.jpeg'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
     display: block;
-    height: 100vh; /* Hace que el fondo ocupe toda la pantalla */
+    height: 100vh; 
     margin: 0;
+    font-family: 'Pixel', sans-serif;
+    color: #d9d9d9;
+    position: relative;
 }
 
 header nav {
@@ -13,36 +23,105 @@ header nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    background: linear-gradient(to right, #6410576e, #0c534f58);
+    background: linear-gradient(to right, #64105788, #0c534f84);
+    position: relative;
+    z-index: 2;
 }
-
 
 header nav .logo img {
     width: 120px;
     height: 120px;
+    border: solid 2px transparent;
     border-radius: 50%;
     object-fit: cover;
-    border: 20px solid transparent; /* Define el grosor del borde */
-    border-image: url('Imagenes_Contenido/pixil-frame-0.png') 30 stretch; /* Imagen de borde */
+    transition: border 0.3s ease-in-out; 
+}
+
+header nav .logo img:hover {
+    border: solid 2px #e439e1; 
 }
 
 .menu {
+    align-items: center;
+    justify-content: center;
     list-style: none;
     display: flex;
-    gap: 20px; /* Espacio entre los elementos */
+    gap: 60px; 
+    margin-right: 23%;
 }
 
 .menu li a {
-    text-decoration: none;
-    color: white;
+    text-decoration: double;
+    color: #d9d9d9;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 15px;
+    transition: color 0.3s ease-in-out;
 }
 
+.menu li a:hover {
+    color:  #ED370C;
+}
+
+#Novedades {
+    position: relative;
+    display: block;
+    margin-left: 25%;
+    margin-right: 25%;
+    z-index: 1;
+}
 
 #Novedades h2 {
-    color: #0c0c0c; /* ✅ Ahora el color es correcto */
-    text-align: center;
-    font-size: 24px;
-    font-family: Arial, sans-serif;
+    color: #d9d9d9; 
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Pixel', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+#Novedades h2:hover {
+    color:  #ED370C;
+}
+
+.banda {
+    position: fixed; 
+    top: 0;
+    bottom: 0;
+    width: 20%; 
+    background-color: rgba(0, 0, 0, 0.162);
+    z-index: 0; 
+}
+
+.banda.derecha {
+    right: 0;
+}
+
+.banda.izquierda {
+    left: 0;
+}
+
+.carrusel {
+    width: 100%;
+    overflow: hidden;
+}
+
+.carrusel-wrapper {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.carrusel-images {
+    display: flex;
+    gap: 20px;
+}
+
+.carrusel-images img {
+    width: 100%;
+    max-width: 300px;
+    border: solid transparent;
+    border-radius: 5%;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.carrusel-images img:hover {
+    transform: scale(1.1); 
 }

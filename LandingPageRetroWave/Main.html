@@ -1,27 +1,50 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <link rel="stylesheet" href="Style.css">
-        <script src="JavaScript.js"></script>
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-        <title>RetroWaveLandingPage</title>
-    </head>
-    <body>
-        <header>
-            <nav>
-                <div class="logo">
-                    <img src="Imagenes_Contenido/logoRetroWave.jpg">
+<html lang="es">
+<head>
+    <link rel="stylesheet" href="style.css">
+    <script src="JavaScript.js" defer></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <title>RetroWaveLandingPage</title>
+</head>
+<body>
+    <!--Banda Derecha-->
+    <div class="banda derecha"></div>
+    <!--Header-->
+    <header>
+        <nav>
+            <div class="logo">
+                <img src="Imagenes_Contenido/logoRetroWave.jpg" alt="Logo RetroWave">
+            </div>
+            <ul class="menu">
+                <li><a href="#Novedades">Novedades</a></li>
+                <li><a href="#Categorias">Categorias</a></li>
+                <li><a href="#Plataformas">Plataformas</a></li>
+                <li><a href="#Contactanos">Contactanos</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!--Parte de Novedades-->
+    <section id="Novedades">
+        <h2>NOVEDADES</h2>
+        <p class="introNovedades">Novedades del Mes:</p>
+        <hr>
+        <!--Carrusel imagenes-->
+        <div class="carrusel" id="carrusel">
+            <div class="carrusel-wrapper" id="carrusel-wrapper">
+                <div class="carrusel-images">
+                    <img src="Imagenes_Contenido/Celeste.jpeg" alt="Imagen1">
+                    <img src="Imagenes_Contenido/Cuphead.png" alt="Imagen2">
+                    <img src="Imagenes_Contenido/Hollow Knight.jpeg" alt="Imagen3">
+                    <img src="Imagenes_Contenido/Paper please.png" alt="Imagen4">
+                    <img src="Imagenes_Contenido/stanley.jpeg" alt="Imagen5">
+                    <img src="Imagenes_Contenido/The binding Of isaac.jpeg" alt="Imagen6">
+                    <img src="Imagenes_Contenido/undertale.jpeg" alt="Imagen7">
+                    <img src="Imagenes_Contenido/Until then.jpeg" alt="Imagen8">
                 </div>
-                <ul class="menu">
-                    <li><a href="#Novedades">Novedades</a></li>
-                    <li><a href="#Categorias">Categorias</a></li>
-                    <li><a href="#Plataformas">Plataformas</a></li>
-                    <li><a href="#Contactanos">Contactanos</a></li>
-                </ul>
-            </nav>
-        </header>
-        <section id="Novedades">
-            <h2>NOVEDADES</h2>
-        </section>
-    </body>
+            </div>
+        </div>
+    </section>
+    <!--Banda Izquierda-->
+    <div class="banda izquierda"></div>
+</body>
 </html>
