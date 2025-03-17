@@ -47,7 +47,7 @@ header nav .logo img:hover {
     list-style: none;
     display: flex;
     gap: 60px; 
-    margin-right: 25%;
+    margin-right: 26%;
 }
 
 .menu li a {
