@@ -18,3 +18,8 @@ header nav .logo {
     border-radius: 50%;
     object-fit: cover;
 }
+
+#Novedadeds h2 {
+    display: flex;
+    font-style: #0c0c0c;
+}
