@@ -29,6 +29,7 @@ header nav {
 }
 
 header nav .logo img {
+    display: flex;
     width: 120px;
     height: 120px;
     border: solid 2px transparent;
