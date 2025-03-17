@@ -3,7 +3,9 @@ body {
     background-size: cover; /* Ajusta la imagen para cubrir todo el fondo */
     background-position: center; /* Centra la imagen */
     background-repeat: no-repeat; /* Evita que la imagen se repita */
-    display: flex;
+    display: block;
+    height: 100vh; /* Hace que el fondo ocupe toda la pantalla */
+    margin: 0;
 }
 
 header nav {
@@ -19,7 +21,7 @@ header nav .logo {
     object-fit: cover;
 }
 
-#Novedadeds h2 {
+#Novedades h2 {
     display: flex;
     font-style: #0c0c0c;
 }
