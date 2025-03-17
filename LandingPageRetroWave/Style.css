@@ -9,7 +9,7 @@ body {
 header nav {
     display: inline-block;
     justify-content: space-between;
-
+    background: linear-gradient(to right, #b91da2, #1bd6cf);
 }
 
 header nav .logo {
