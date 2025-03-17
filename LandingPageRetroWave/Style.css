@@ -6,8 +6,15 @@ body {
     display: flex;
 }
 
-.menu {
+header nav {
     display: inline-block;
     justify-content: space-between;
-    
+
+}
+
+header nav .logo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    object-fit: cover;
 }
