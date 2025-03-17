@@ -14,7 +14,7 @@ header nav {
     background: linear-gradient(to right, #b91da2, #1bd6cf);
 }
 
-header nav .logo {
+header nav .logo img {
     width: 120px;
     height: 120px;
     border-radius: 50%;
