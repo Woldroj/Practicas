@@ -4,27 +4,30 @@ const totalImages = images.length;
 const wrapper = document.querySelector('.carrusel-wrapper');
 const carruselImages = document.querySelector('.carrusel-images');
 
-// Clonar las imágenes y agregarlas al final para crear el efecto de bucle infinito
+// Clone the images to put the first the las one 
 function clonacion() {
     images.forEach(img => {
-        const clone = img.cloneNode(true); // Clonar cada imagen
-        carruselImages.appendChild(clone); // Agregar el clon al final
+        const clone = img.cloneNode(true); // Clone each images
+        carruselImages.appendChild(clone); // Add the images in the end
     });
 }
 
-// Mover el carrusel hacia la derecha
+// Move the carousel to the right
 function moveNext() {
     clonacion();
     currentIndex++;
-    // Actualizar el desplazamiento del carrusel
+    // Upadate the movement
     updateCarrusel();
 }
 
-// Actualizar el desplazamiento del carrusel
+// Function to Update the movement
 function updateCarrusel() {
-    const offset = -currentIndex * (images[0].clientWidth + 20); // Ajusta el desplazamiento
+    const offset = -currentIndex * (images[0].clientWidth + 20); // Adjust the movement
     wrapper.style.transform = `translateX(${offset}px)`;
 }
 
-// Iniciar el movimiento del carrusel de manera infinita
-setInterval(moveNext, 3000); // Deslizar cada 3 segundos
+// Start the movement 
+setInterval(moveNext, 3000); // Slide each 3 seconds
+
+//********Part of filtration************
+
