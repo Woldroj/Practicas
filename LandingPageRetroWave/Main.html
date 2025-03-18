@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./Style.css">
     <script src="./JavaScript.js" defer></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <title>RetroWaveLandingPage</title>
 </head>
 <body>
@@ -58,20 +58,35 @@
         <h2>Juegos</h2>
         <div class="Games">
             <div id="Retro">
-                <img src="./Imagenes_Contenido/Imagenes_Retro/descarga.jpeg" class="btn">
+                <div class="container-image">
+                    <img src="./Imagenes_Contenido/Imagenes_Retro/descarga.jpeg" class="btn">
+                    <div class="container-text" id="Rtr">
+                        <p>Retro</p>
+                    </div>
+                </div>
                 <img src="./Imagenes_Contenido/Imagenes_Retro/Contra.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Retro/PacMan.png">
                 <img src="./Imagenes_Contenido/Imagenes_Retro/Donke_Kong.jpeg">
             </div>
             <div id="Racing">
-                <img src="./Imagenes_Contenido/Imagenes_Racing/349589-forza-horizon.webp" class="btn">
+                <div class="container-image">
+                    <img src="./Imagenes_Contenido/Imagenes_Racing/349589-forza-horizon.webp" class="btn">
+                    <div class="container-text" id="Rcng">
+                        <p>Carreras</p>
+                    </div>
+                </div>
                 <img src="./Imagenes_Contenido/Imagenes_Racing/F1.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Racing/Gran_turismo.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Racing/Mario_Kart.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Racing/Need_for_Speed.jpeg">
             </div>
             <div id="Indie">
-                <img src="./Imagenes_Contenido/Imagenes_Indie/indieeeeeee.jpeg" class="btn">
+                <div class="container-image">
+                    <img src="./Imagenes_Contenido/Imagenes_Indie/indieeeeeee.jpeg" class="btn">
+                    <div class="container-text" id="Ind">
+                        <p>Indie</p>
+                    </div>
+                </div>
                 <img src="./Imagenes_Contenido/Imagenes_Indie/Celeste.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Indie/Hollow_Knight_2.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Indie/Hotline_Miami.jpeg">
@@ -79,13 +94,23 @@
                 <img src="./Imagenes_Contenido/Imagenes_Indie/The_Witness.jpeg">
             </div>
             <div id="Strategy">
-                <img src="./Imagenes_Contenido/Imagenes_Strategy/strategiaaa.jpeg" class="btn">
+                <div class="container-image">
+                    <img src="./Imagenes_Contenido/Imagenes_Strategy/strategiaaa.jpeg" class="btn" >
+                    <div class="container-text" id="Strtg">
+                        <p>Estrategia</p>
+                    </div>
+                </div>
                 <img src="./Imagenes_Contenido/Imagenes_Strategy/Age_Of_Empire_2.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Strategy/Starcraft_2.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Strategy/XCOM.jpeg">
             </div>
             <div id="Shooters">
-                <img src="./Imagenes_Contenido/Imagenes_Shooters/Shooter.png" class="btn">
+                <div class="container-image">
+                    <img src="./Imagenes_Contenido/Imagenes_Shooters/Shooter.png" class="btn" >
+                    <div class="container-text" id="Shtrs">
+                        <p>Accion</p>
+                    </div>
+                </div>
                 <img src="./Imagenes_Contenido/Imagenes_Shooters/Call_of_duty.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Shooters/Doom.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Shooters/Fortnite.jpeg">
@@ -93,20 +118,38 @@
                 <img src="./Imagenes_Contenido/Imagenes_Shooters/Rainbow.jpeg">
             </div>
             <div id="Adventure">
-                <img src="./Imagenes_Contenido/Imagenes_Adventure/aventuraaaaaaaaaa.jpeg" class="btn">
+                <div class="container-image">
+                    <img src="./Imagenes_Contenido/Imagenes_Adventure/aventuraaaaaaaaaa.jpeg" class="btn" >
+                    <div class="container-text" id="Adv">
+                        <p>Aventura</p>
+                    </div>
+                </div>
                 <img src="./Imagenes_Contenido/Imagenes_Adventure/Red_Dead_Demption2.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Adventure/The_witcher3.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Adventure/TLOU2.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Adventure/uncharted4.jpeg">
             </div>
             <div id="Fighting">
-                <img src="./Imagenes_Contenido/Imagenes_Fighting/pelea.webp" class="btn">
+                <div class="container-image">
+                    <img src="./Imagenes_Contenido/Imagenes_Fighting/pelea.webp" class="btn" >
+                    <div class="container-text" id="Fght">
+                        <p>Lucha</p>
+                    </div>
+                </div>
                 <img src="./Imagenes_Contenido/Imagenes_Fighting/MortalKombat.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Fighting/Street_Fighting.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Fighting/Tekken7.jpeg">
             </div>
+
+            <!--TERROR-->
+
             <div id="Terror">
-                <img src="./Imagenes_Contenido/Imagenes_Terror/miedo.jpeg" class="btn">
+                <div class="container-image">
+                    <img src="./Imagenes_Contenido/Imagenes_Terror/miedo.jpeg" class="btn" >
+                    <div class="container-text" id="Trr">
+                        <p>Terror</p>
+                    </div>
+                </div>
                 <img src="./Imagenes_Contenido/Imagenes_Terror/Amnesia.jpg">
                 <img src="./Imagenes_Contenido/Imagenes_Terror/Blair witch.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_Terror/Outlast.jpeg">
@@ -115,7 +158,12 @@
                 <img src="./Imagenes_Contenido/Imagenes_Terror/Silent_hill2.jpeg">
             </div>
             <div id="Graphic_novel">
-                <img src="./Imagenes_Contenido/Imagenes_GraphicNovel/aventura grafica.png" class="btn">
+                <div class="container-image">
+                    <img src="./Imagenes_Contenido/Imagenes_GraphicNovel/aventura grafica.png" class="btn" >
+                    <div class="container-text" id="GN">
+                        <p>Novela Visual</p>
+                    </div>
+                </div>
                 <img src="./Imagenes_Contenido/Imagenes_GraphicNovel/LifeIsStrange.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_GraphicNovel/Night_in_the_wood.jpeg">
                 <img src="./Imagenes_Contenido/Imagenes_GraphicNovel/unitl_then2.jpeg">
