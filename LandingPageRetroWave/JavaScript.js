@@ -31,3 +31,11 @@ setInterval(moveNext, 3000); // Slide each 3 seconds
 
 //********Part of filtration************
 
+//Images with class btn and Images with not class btn
+
+const allImages = document.querySelectorAll('.GamesSection .Games img')
+allImages.forEach(img => {
+    if(!img.classList.contains('btn')) {
+        img.style.display = 'none';
+    }
+});

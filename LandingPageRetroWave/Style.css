@@ -16,16 +16,22 @@ body {
     font-family: 'Pixel', sans-serif;
     color: #d9d9d9;
     position: relative;
+    margin-top: 230px;
+    background-attachment: fixed;
 }
 
+/*Menu*/
 header nav {
     display: flex;
+    top: 0;
+    left: 0;
+    width: 100%;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
     background: linear-gradient(to right, #64105788, #0c534f86);
-    position: relative;
-    z-index: 2;
+    position: fixed;
+    z-index: 1000;
 }
 
 header nav .logo img {
@@ -68,7 +74,8 @@ header nav p {
     color:  #ED370C;
 }
 
-#News {
+/*News Section*/
+.News {
     position: relative;
     display: block;
     margin-left: 25%;
@@ -76,7 +83,7 @@ header nav p {
     z-index: 1;
 }
 
-#News h2 {
+.News h2 {
     color: #d9d9d9; 
     padding: 10px;
     font-size: 30px;
@@ -84,7 +91,7 @@ header nav p {
     transition: color 0.3s ease-in-out;
 }
 
-#News h2:hover {
+.News h2:hover {
     color:  #ED370C;
 }
 
@@ -106,6 +113,7 @@ header nav p {
     left: 0;
 }
 
+/*Carousel section*/
 .carrusel {
     width: 100%;
     overflow: hidden;
@@ -131,4 +139,45 @@ header nav p {
 
 .carrusel-images img:hover {
     transform: scale(1.1); 
+}
+
+/*Games section*/
+.GamesSection {
+    position: relative;
+    display: block;
+    margin-left: 25%;
+    margin-right: 25%;
+    z-index: 1;
+}
+
+/*********************************
+******* Buttons and filter *******
+*********************************/
+
+.GamesSection h2 {
+    color: #d9d9d9; 
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Pixel', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+.GamesSection h2:hover {
+    color:  #ED370C;
+}
+
+.GamesSection .Games{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+.Games .btn{
+    display: flex;
+    width: 250px;
+    height: 150px;
+    border-radius: 5%;
 }
