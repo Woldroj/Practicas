@@ -80,3 +80,23 @@ $(document).ready(function() {
     attachEventHandlers();
 });
 
+//Information
+
+let index = 0;
+
+        function moveSlide(direction) {
+            const carousel = document.querySelector('.container-info');
+            const slides = document.querySelectorAll('.slide');
+            const totalSlides = slides.length;
+
+            index += direction;
+
+            if (index < 0) {
+                index = totalSlides - 1;
+            } else if (index >= totalSlides) {
+                index = 0;
+            }
+
+            let offset = -index * 100; // Mueve el carrusel
+            carousel.style.transform = `translateX(${offset}%)`;
+        }
