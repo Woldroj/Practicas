@@ -39,32 +39,32 @@ $(document).ready(function() {
     const allImages = document.querySelectorAll('.GamesSection .Games img');
     allImages.forEach(img => {
         if (!img.classList.contains('btn')) {
-            img.style.display = 'none'; // Ocultar las imágenes sin la clase 'btn'
+            img.style.display = 'none'; // Hide images without the class btn
         }
     });
-    // Guardar una copia de toda la estructura HTML de .Games
+    // Save a copy of the structure
     const gamesSectionHTML = $('.GamesSection .Games').html();
 
-    // Función para restaurar todo a su estado original
+    // Function to restore all
     function restoreAll() {
-        $('.GamesSection .Games').html(gamesSectionHTML); // Restaurar la estructura HTML original
-        $('.back-button').remove(); // Eliminar el botón "Volver atrás"
-        $('.GamesSection h2').text('Juegos'); // Restaurar el texto del h2
-        attachEventHandlers(); // Volver a asignar los eventos de clic a los botones
+        $('.GamesSection .Games').html(gamesSectionHTML); 
+        $('.back-button').remove(); // Delete "Volver Atras" button
+        $('.GamesSection h2').text('Juegos'); 
+        attachEventHandlers(); 
     }
 
-    // Función para asignar los eventos de clic a los botones
+    // Function to asign again the buttons to all the images etc
     function attachEventHandlers() {
         $('.container-image').click(function() {
-            // Obtener el id del contenedor padre del contenedor de imagen clickeado
+            
             var containerId = $(this).closest('div').attr('id');
 
-            // Ocultar todas las imágenes y contenedores de texto
+            
             $('.GamesSection .Games img, .GamesSection .Games .container-image').remove();
 
-            // Mostrar solo las imágenes dentro del contenedor correspondiente, excepto la que tiene la clase .btn
+            //Show images that are inside same id that the btn and show all except the button
             $('#' + containerId + ' img').not('.btn').each(function() {
-                $(this).clone().appendTo('.GamesSection .Games'); // Clonar y agregar cada imagen
+                $(this).clone().appendTo('.GamesSection .Games'); 
             });
 
             allImages.forEach(img => {
@@ -73,19 +73,19 @@ $(document).ready(function() {
                 }
             });
 
-            // Cambiar el texto del h2 dentro del div .GamesSection
+            
             var categoryName = $(this).find('.container-text p').text();
             $('.GamesSection h2').text('Juegos - ' + categoryName);
 
-            // Agregar el botón "Volver atrás"
+            // Add the button "Volver Atras"
             $('<button class="back-button">Volver atras</button>')
                 .appendTo('.GamesSection')
                 .click(function() {
-                    restoreAll(); // Restaurar todo al hacer clic en el botón
+                    restoreAll(); 
                 });
         });
     }
 
-    // Asignar los eventos de clic a los botones al cargar la página
+    
     attachEventHandlers();
 });
