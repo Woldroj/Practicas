@@ -31,18 +31,18 @@ setInterval(moveNext, 3000); // Slide each 3 seconds
 
 
 
-
 //********Part of filtration************
 
 $(document).ready(function() {
+   
 
-    $('.GamesSection .Games img').not('.btn').hide();
+    $('.GamesSection .Games .images').hide();
     // Guarda una copia de la estructura inicial
     const gamesSectionHTML = $('.GamesSection .Games').html();
 
     function restoreAll() {
         $('.GamesSection .Games').html(gamesSectionHTML); 
-        $('.GamesSection .Games img').not('.btn').hide(); // Ocultar todas las imágenes relacionadas
+        $('.GamesSection .Games .images').hide(); // Ocultar todas las imágenes relacionadas
         $('.back-button').remove(); // Eliminar botón "Volver Atrás"
         $('.GamesSection h2').text('Juegos');
         attachEventHandlers();
@@ -56,7 +56,13 @@ $(document).ready(function() {
             $('.GamesSection .Games .container-image').hide();
 
             //Parte que me mata
-            $('#' + containerId + ' img').not('.btn').show();
+            
+            const allImages = document.querySelectorAll('.GamesSection .Games #' + containerId + ' images')
+            allImages.forEach(img => {
+                if(!img.classList.contains('btn')) {
+                img.style.display = 'flex';
+                }
+            });
 
             // Cambia el título con la categoría seleccionada
             var categoryName = $(this).find('.container-text p').text();

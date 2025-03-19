@@ -246,7 +246,7 @@ header nav p {
     background-color: #0c534f86;
 }
 
-.GamesSection .Games img {
+.GamesSection .Games .images {
     display: flex;
     width: 250px;
     height: 150px;
