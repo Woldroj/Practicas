@@ -56,11 +56,11 @@ $(document).ready(function() {
             $('.GamesSection .Games .container-image').hide();
 
             //Parte que me mata
-            
-            const allImages = document.querySelectorAll('.GamesSection .Games #' + containerId + ' images')
+            const allImages = document.querySelectorAll('.GamesSection .Games #' + containerId + ' .images')
             allImages.forEach(img => {
-                if(!img.classList.contains('btn')) {
-                img.style.display = 'flex';
+                if(img.classList.contains('.images')) {
+                    $('.GamesSection .Games .images').show();
+                    img.style.display = 'flex';
                 }
             });
 

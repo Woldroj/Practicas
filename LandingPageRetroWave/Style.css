@@ -28,7 +28,7 @@ header nav {
     width: 100%;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 20px;
+    padding: 5px 20px;
     background: linear-gradient(to right, #64105782, rgba(12, 83, 79, 0.511));
     position: fixed;
     z-index: 1000;
@@ -104,7 +104,7 @@ header nav p {
     position: fixed; 
     top: 0;
     bottom: 0;
-    margin-top: 144px;
+    margin-top: 134px;
     width: 20%; 
     background-color: rgba(0, 0, 0, 0.587);
     z-index: 0; 
@@ -155,10 +155,6 @@ header nav p {
     z-index: 1;
 }
 
-/*********************************
-******* Buttons and filter *******
-*********************************/
-
 .GamesSection h2 {
     cursor: default;
     color: #d9d9d9; 
@@ -196,7 +192,7 @@ header nav p {
     height: 150px; 
     overflow: hidden;
     border-radius: 5%; 
-    box-shadow: 0 4px 6px rgba(255, 255, 255, 0.176); /* Sombra opcional para destacar las imágenes */
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402); /* Sombra opcional para destacar las imágenes */
 }
 
 .container-text {
@@ -251,4 +247,27 @@ header nav p {
     width: 250px;
     height: 150px;
     border-radius: 5%;
+}
+
+/*Information*/
+
+.Information {
+    position: relative;
+    display: block;
+    margin-left: 25%;
+    margin-right: 25%;
+    z-index: 1;
+}
+
+.Information h2 {
+    cursor: default;
+    color: #d9d9d9; 
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Pixel', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+.Information h2:hover {
+    color:  #ED370C;
 }
