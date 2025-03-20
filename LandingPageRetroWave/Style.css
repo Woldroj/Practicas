@@ -259,51 +259,42 @@ header nav p {
     box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402);
 }
 
-/* Estilos para las imágenes en cuadros grises */
-/* Asegura que el contenedor ocupe todo el ancho disponible */
 .imagesRt, .imagesRc, .imagesI, .imagesSt, .imagesSh, .imagesAd, .imagesF, .imagesT, .imagesGN {
     display: flex;
-    flex-direction: column; /* En columna */
-    align-items: stretch; /* Ocupar todo el ancho disponible */
+    flex-direction: column; 
+    align-items: stretch; 
     gap: 10px;
-    width: 700px; /* Usa todo el ancho de la ventana */
+    width: 700px; 
 }
 
-/* Contenedor de cada imagen con fondo gris */
 .image-box {
     display: flex;
     align-items: center;
-    background-color: #646363; /* Fondo gris */
+    background-color: #646363; 
     padding: 10px;
-    width: 100%; /* Ocupa todo el ancho */
+    width: 100%; 
     border-radius: 10px;
     transition: all 0.5 ease-in-out;
     box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402);
 }
 
-
 .image-box:hover {
     transform: scale(1.1);
 }
 
-/* Tamaño uniforme para las imágenes */
 .image-box img {
-    width: 200px; /* Tamaño uniforme */
+    width: 200px; 
     height: 20%;
-    max-height: 100px; /* Mantiene proporciones */
-    object-fit: cover; /* Asegura que la imagen se vea bien */
+    max-height: 100px; 
+    object-fit: cover; 
     margin-right: 10px;
     border-radius: 10px;
 }
 
-/* Texto a la derecha de la imagen */
 .image-box .text {
     flex: 1;
     text-align: right;
 }
-
-
-
 
 .container-text {
     position: absolute;
