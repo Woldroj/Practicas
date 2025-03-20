@@ -186,14 +186,122 @@ header nav p {
     border-radius: 5%;
 }
 
-.container-image {
+.container-imageRt {
     position: relative;
     width: 250px; 
     height: 150px; 
     overflow: hidden;
     border-radius: 5%; 
-    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402); /* Sombra opcional para destacar las imágenes */
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402);
 }
+.container-imageRc {
+    position: relative;
+    width: 250px; 
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 5%; 
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402);
+}
+.container-imageI {
+    position: relative;
+    width: 250px; 
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 5%; 
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402);
+}
+.container-imageSt {
+    position: relative;
+    width: 250px; 
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 5%; 
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402);
+}
+.container-imageSh {
+    position: relative;
+    width: 250px; 
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 5%; 
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402);
+}
+.container-imageAd {
+    position: relative;
+    width: 250px; 
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 5%; 
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402);
+}
+.container-imageF {
+    position: relative;
+    width: 250px; 
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 5%; 
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402);
+}
+.container-imageT {
+    position: relative;
+    width: 250px; 
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 5%; 
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402);
+}
+.container-imageGN {
+    position: relative;
+    width: 250px; 
+    height: 150px; 
+    overflow: hidden;
+    border-radius: 5%; 
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.402);
+}
+
+/* Estilos para las imágenes en cuadros grises */
+/* Asegura que el contenedor ocupe todo el ancho disponible */
+.imagesRt, .imagesRc, .imagesI, .imagesSt, .imagesSh, .imagesAd, .imagesF, .imagesT, .imagesGN {
+    display: flex;
+    flex-direction: column; /* En columna */
+    align-items: stretch; /* Ocupar todo el ancho disponible */
+    gap: 10px;
+    width: 700px; /* Usa todo el ancho de la ventana */
+}
+
+/* Contenedor de cada imagen con fondo gris */
+.image-box {
+    display: flex;
+    align-items: center;
+    background-color: #646363; /* Fondo gris */
+    padding: 10px;
+    width: 100%; /* Ocupa todo el ancho */
+    border-radius: 10px;
+    transition: all 0.5 ease-in-out;
+}
+
+.image-box:hover {
+    transform: scale(1.1);
+}
+
+/* Tamaño uniforme para las imágenes */
+.image-box img {
+    width: 200px; /* Tamaño uniforme */
+    height: 20%;
+    max-height: 100px; /* Mantiene proporciones */
+    object-fit: cover; /* Asegura que la imagen se vea bien */
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+/* Texto a la derecha de la imagen */
+.image-box .text {
+    flex: 1;
+    text-align: right;
+}
+
+
+
 
 .container-text {
     position: absolute;
@@ -338,4 +446,37 @@ header nav p {
 
 .next {
     right: 10px;
+}
+
+.extends-information p {
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: small;
+    cursor: default;
+    color: #d9d9d9; 
+    padding: 10px;
+    font-size: 30px;
+}
+
+.extends-information h4 {
+    cursor: default;
+    color: #d9d9d9; 
+    padding: 10px;
+    font-size: 30px;
+    font-family: 'Pixel', sans-serif;
+    transition: color 0.3s ease-in-out;
+}
+
+.extends-information .INFO1 {
+    position: relative;
+    z-index: 5;
+}
+
+.extends-information .INFO2 {
+    position: relative;
+    z-index: 6;
+}
+
+.extends-information .INFO3 {
+    position: relative;
+    z-index: 7;
 }

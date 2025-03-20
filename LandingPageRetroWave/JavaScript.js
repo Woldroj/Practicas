@@ -34,41 +34,200 @@ setInterval(moveNext, 3000); // Slide each 3 seconds
 //********Part of filtration************
 
 $(document).ready(function() {
-   
-
-    $('.GamesSection .Games .images').hide();
-    // Guarda una copia de la estructura inicial
+    $('.GamesSection .Games .imagesRt').hide();
+    $('.GamesSection .Games .imagesRc').hide(); // Hide all selected images
+    $('.GamesSection .Games .imagesI').hide();
+    $('.GamesSection .Games .imagesSt').hide();
+    $('.GamesSection .Games .imagesSh').hide();
+    $('.GamesSection .Games .imagesAd').hide();
+    $('.GamesSection .Games .imagesF').hide();
+    $('.GamesSection .Games .imagesT').hide();
+    $('.GamesSection .Games .imagesGN').hide();
+    // Save a copy of the original structure
     const gamesSectionHTML = $('.GamesSection .Games').html();
 
     function restoreAll() {
         $('.GamesSection .Games').html(gamesSectionHTML); 
-        $('.GamesSection .Games .images').hide(); // Ocultar todas las imágenes relacionadas
-        $('.back-button').remove(); // Eliminar botón "Volver Atrás"
+        $('.GamesSection .Games .imagesRt').hide();
+        $('.GamesSection .Games .imagesRc').hide(); // Hide all selected images
+        $('.GamesSection .Games .imagesI').hide();
+        $('.GamesSection .Games .imagesSt').hide();
+        $('.GamesSection .Games .imagesSh').hide();
+        $('.GamesSection .Games .imagesAd').hide();
+        $('.GamesSection .Games .imagesF').hide();
+        $('.GamesSection .Games .imagesT').hide();
+        $('.GamesSection .Games .imagesGN').hide();
+        $('.back-button').remove(); // Remove button "Volver Atras"
         $('.GamesSection h2').text('Juegos');
         attachEventHandlers();
     }
 
     function attachEventHandlers() {
-        $('.container-image').click(function() {
-            var containerId = $(this).closest('div').attr('id');
-
-            // Elimina todas las imágenes y contenedores de imágenes
-            $('.GamesSection .Games .container-image').hide();
-
-            //Parte que me mata
-            const allImages = document.querySelectorAll('.GamesSection .Games #' + containerId + ' .images')
-            allImages.forEach(img => {
-                if(img.classList.contains('.images')) {
-                    $('.GamesSection .Games .images').show();
-                    img.style.display = 'flex';
-                }
-            });
-
-            // Cambia el título con la categoría seleccionada
+        $('.container-imageRt').click(function() {
+            $('.GamesSection .Games .container-imageRt').hide();
+            $('.GamesSection .Games .container-imageRc').hide();
+            $('.GamesSection .Games .container-imageI').hide();
+            $('.GamesSection .Games .container-imageSt').hide();
+            $('.GamesSection .Games .container-imageSh').hide();
+            $('.GamesSection .Games .container-imageAd').hide();
+            $('.GamesSection .Games .container-imageF').hide();
+            $('.GamesSection .Games .container-imageT').hide();
+            $('.GamesSection .Games .container-imageGN').hide();
+            $('.GamesSection .Games .imagesRt').show();
             var categoryName = $(this).find('.container-text p').text();
             $('.GamesSection h2').text('Juegos - ' + categoryName);
-
-            // Agregar botón "Volver atrás"
+            $('<button class="back-button">Volver atras</button>')
+                .appendTo('.GamesSection')
+                .click(function() {
+                    restoreAll(); 
+                });
+        });
+        $('.container-imageRc').click(function() {
+            $('.GamesSection .Games .container-imageRt').hide();
+            $('.GamesSection .Games .container-imageRc').hide();
+            $('.GamesSection .Games .container-imageI').hide();
+            $('.GamesSection .Games .container-imageSt').hide();
+            $('.GamesSection .Games .container-imageSh').hide();
+            $('.GamesSection .Games .container-imageAd').hide();
+            $('.GamesSection .Games .container-imageF').hide();
+            $('.GamesSection .Games .container-imageT').hide();
+            $('.GamesSection .Games .container-imageGN').hide();
+            $('.GamesSection .Games .imagesRc').show();
+            var categoryName = $(this).find('.container-text p').text();
+            $('.GamesSection h2').text('Juegos - ' + categoryName);
+            $('<button class="back-button">Volver atras</button>')
+                .appendTo('.GamesSection')
+                .click(function() {
+                    restoreAll(); 
+                });
+        });
+        $('.container-imageI').click(function() {
+            $('.GamesSection .Games .container-imageRt').hide();
+            $('.GamesSection .Games .container-imageRc').hide();
+            $('.GamesSection .Games .container-imageI').hide();
+            $('.GamesSection .Games .container-imageSt').hide();
+            $('.GamesSection .Games .container-imageSh').hide();
+            $('.GamesSection .Games .container-imageAd').hide();
+            $('.GamesSection .Games .container-imageF').hide();
+            $('.GamesSection .Games .container-imageT').hide();
+            $('.GamesSection .Games .container-imageGN').hide();
+            $('.GamesSection .Games .imagesI').show();
+            var categoryName = $(this).find('.container-text p').text();
+            $('.GamesSection h2').text('Juegos - ' + categoryName);
+            $('<button class="back-button">Volver atras</button>')
+                .appendTo('.GamesSection')
+                .click(function() {
+                    restoreAll(); 
+                });
+        });
+        $('.container-imageSt').click(function() {
+            $('.GamesSection .Games .container-imageRt').hide();
+            $('.GamesSection .Games .container-imageRc').hide();
+            $('.GamesSection .Games .container-imageI').hide();
+            $('.GamesSection .Games .container-imageSt').hide();
+            $('.GamesSection .Games .container-imageSh').hide();
+            $('.GamesSection .Games .container-imageAd').hide();
+            $('.GamesSection .Games .container-imageF').hide();
+            $('.GamesSection .Games .container-imageT').hide();
+            $('.GamesSection .Games .container-imageGN').hide();
+            $('.GamesSection .Games .imagesSt').show();
+            var categoryName = $(this).find('.container-text p').text();
+            $('.GamesSection h2').text('Juegos - ' + categoryName);
+            $('<button class="back-button">Volver atras</button>')
+                .appendTo('.GamesSection')
+                .click(function() {
+                    restoreAll(); 
+                });
+        });
+        $('.container-imageSh').click(function() {
+            $('.GamesSection .Games .container-imageRt').hide();
+            $('.GamesSection .Games .container-imageRc').hide();
+            $('.GamesSection .Games .container-imageI').hide();
+            $('.GamesSection .Games .container-imageSt').hide();
+            $('.GamesSection .Games .container-imageSh').hide();
+            $('.GamesSection .Games .container-imageAd').hide();
+            $('.GamesSection .Games .container-imageF').hide();
+            $('.GamesSection .Games .container-imageT').hide();
+            $('.GamesSection .Games .container-imageGN').hide();
+            $('.GamesSection .Games .imagesSh').show();
+            var categoryName = $(this).find('.container-text p').text();
+            $('.GamesSection h2').text('Juegos - ' + categoryName);
+            $('<button class="back-button">Volver atras</button>')
+                .appendTo('.GamesSection')
+                .click(function() {
+                    restoreAll(); 
+                });
+        });
+        $('.container-imageAd').click(function() {
+            $('.GamesSection .Games .container-imageRt').hide();
+            $('.GamesSection .Games .container-imageRc').hide();
+            $('.GamesSection .Games .container-imageI').hide();
+            $('.GamesSection .Games .container-imageSt').hide();
+            $('.GamesSection .Games .container-imageSh').hide();
+            $('.GamesSection .Games .container-imageAd').hide();
+            $('.GamesSection .Games .container-imageF').hide();
+            $('.GamesSection .Games .container-imageT').hide();
+            $('.GamesSection .Games .container-imageGN').hide();
+            $('.GamesSection .Games .imagesAd').show();
+            var categoryName = $(this).find('.container-text p').text();
+            $('.GamesSection h2').text('Juegos - ' + categoryName);
+            $('<button class="back-button">Volver atras</button>')
+                .appendTo('.GamesSection')
+                .click(function() {
+                    restoreAll(); 
+                });
+        });
+        $('.container-imageF').click(function() {
+            $('.GamesSection .Games .container-imageRt').hide();
+            $('.GamesSection .Games .container-imageRc').hide();
+            $('.GamesSection .Games .container-imageI').hide();
+            $('.GamesSection .Games .container-imageSt').hide();
+            $('.GamesSection .Games .container-imageSh').hide();
+            $('.GamesSection .Games .container-imageAd').hide();
+            $('.GamesSection .Games .container-imageF').hide();
+            $('.GamesSection .Games .container-imageT').hide();
+            $('.GamesSection .Games .container-imageGN').hide();
+            $('.GamesSection .Games .imagesF').show();
+            var categoryName = $(this).find('.container-text p').text();
+            $('.GamesSection h2').text('Juegos - ' + categoryName);
+            $('<button class="back-button">Volver atras</button>')
+                .appendTo('.GamesSection')
+                .click(function() {
+                    restoreAll(); 
+                });
+        });
+        $('.container-imageT').click(function() {
+            $('.GamesSection .Games .container-imageRt').hide();
+            $('.GamesSection .Games .container-imageRc').hide();
+            $('.GamesSection .Games .container-imageI').hide();
+            $('.GamesSection .Games .container-imageSt').hide();
+            $('.GamesSection .Games .container-imageSh').hide();
+            $('.GamesSection .Games .container-imageAd').hide();
+            $('.GamesSection .Games .container-imageF').hide();
+            $('.GamesSection .Games .container-imageT').hide();
+            $('.GamesSection .Games .container-imageGN').hide();
+            $('.GamesSection .Games .imagesT').show();
+            var categoryName = $(this).find('.container-text p').text();
+            $('.GamesSection h2').text('Juegos - ' + categoryName);
+            $('<button class="back-button">Volver atras</button>')
+                .appendTo('.GamesSection')
+                .click(function() {
+                    restoreAll(); 
+                });
+        });
+        $('.container-imageGN').click(function() {
+            $('.GamesSection .Games .container-imageRt').hide();
+            $('.GamesSection .Games .container-imageRc').hide();
+            $('.GamesSection .Games .container-imageI').hide();
+            $('.GamesSection .Games .container-imageSt').hide();
+            $('.GamesSection .Games .container-imageSh').hide();
+            $('.GamesSection .Games .container-imageAd').hide();
+            $('.GamesSection .Games .container-imageF').hide();
+            $('.GamesSection .Games .container-imageT').hide();
+            $('.GamesSection .Games .container-imageGN').hide();
+            $('.GamesSection .Games .imagesGN').show();
+            var categoryName = $(this).find('.container-text p').text();
+            $('.GamesSection h2').text('Juegos - ' + categoryName);
             $('<button class="back-button">Volver atras</button>')
                 .appendTo('.GamesSection')
                 .click(function() {
@@ -100,3 +259,19 @@ let index = 0;
             let offset = -index * 100; // Mueve el carrusel
             carousel.style.transform = `translateX(${offset}%)`;
         }
+
+$(document).ready(function(){
+
+    $('.extends-information p').hide();
+    $('.extends-information h4').hide();
+
+    $('#img-Info1').click(function(){
+        $('.extends-information .INFO1, .extends-information .info1').toggle(500);
+    });
+    $('#img-Info2').click(function(){
+        $('.extends-information .INFO2, .extends-information .info2').toggle(500);
+    });
+    $('#img-Info3').click(function(){
+        $('.extends-information .INFO3, .extends-information .info3').toggle(500);
+    });
+});
