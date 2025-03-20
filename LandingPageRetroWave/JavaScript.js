@@ -266,12 +266,18 @@ $(document).ready(function(){
     $('.extends-information h4').hide();
 
     $('#img-Info1').click(function(){
+        $('.extends-information .INFO3, .extends-information .info3').fadeOut(300);
+        $('.extends-information .INFO2, .extends-information .info2').fadeOut(300);
         $('.extends-information .INFO1, .extends-information .info1').toggle(500);
     });
     $('#img-Info2').click(function(){
+        $('.extends-information .INFO1, .extends-information .info1').fadeOut(300);
+        $('.extends-information .INFO3, .extends-information .info3').fadeOut(300);
         $('.extends-information .INFO2, .extends-information .info2').toggle(500);
     });
     $('#img-Info3').click(function(){
+        $('.extends-information .INFO1, .extends-information .info1').fadeOut(300);
+        $('.extends-information .INFO2, .extends-information .info2').fadeOut(300);
         $('.extends-information .INFO3, .extends-information .info3').toggle(500);
     });
 });
