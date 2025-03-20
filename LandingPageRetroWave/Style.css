@@ -183,18 +183,21 @@ header nav p {
     position: fixed; 
     top: 0;
     bottom: 0;
-    margin-top: 134px;
-    width: 20%; 
-    background-color: rgba(0, 0, 0, 0.587);
-    z-index: 0; 
+    margin-top: 130px;
+    width: 20%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 0;
+    border-right: 1px solid #333; /* Borde sutil a la derecha */
 }
 
 .Aside.right {
     right: 0;
+    box-shadow: 4px 0 15px rgba(0, 255, 255, 0.603); /* Sombra suave */
 }
 
 .Aside.left {
     left: 0;
+    box-shadow: 4px 0 15px rgba(255, 0, 247, 0.603); /* Sombra suave */
 }
 
 /*Carousel section*/
