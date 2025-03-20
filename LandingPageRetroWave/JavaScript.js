@@ -22,7 +22,7 @@ function moveNext() {
 
 // Function to Update the movement
 function updateCarrusel() {
-    const offset = -currentIndex * (images[0].clientWidth + 30); // Adjust the movement
+    const offset = -currentIndex * (images[0].clientWidth); // Adjust the movement
     wrapper.style.transform = `translateX(${offset}px)`;
 }
 
@@ -281,3 +281,43 @@ $(document).ready(function(){
         $('.extends-information .INFO3, .extends-information .info3').toggle(500);
     });
 });
+
+// Hero Section
+
+function openModal(id) {
+    document.getElementById(id).style.display = 'flex';
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal(id) {
+    document.getElementById(id).style.display = 'none';
+    document.body.style.overflow = '';
+}
+
+function register() {
+    let user = document.getElementById("registerUser").value;
+    let email = document.getElementById("registerEmail").value;
+    let password = document.getElementById("registerPassword").value;
+    
+    if (user && email && password) {
+        localStorage.setItem("user", JSON.stringify({ username: user, email: email, password: password }));
+        alert("Registro exitoso. Ahora puedes iniciar sesión.");
+        closeModal("registerModal");
+    } else {
+        alert("Por favor, completa todos los campos.");
+    }
+}
+
+function login() {
+    let user = document.getElementById("loginUser").value;
+    let password = document.getElementById("loginPassword").value;
+    let storedUser = JSON.parse(localStorage.getItem("user"));
+    
+    if (storedUser && user === storedUser.username && password === storedUser.password) {
+        alert("Inicio de sesión exitoso.");
+        document.getElementById("welcomeMessage").innerText = "Bienvenido, " + storedUser.username;
+        closeModal("loginModal");
+    } else {
+        alert("Usuario o contraseña incorrectos.");
+    }
+}
