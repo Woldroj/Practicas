@@ -652,6 +652,16 @@ html {
         box-shadow: 0 4px 6px #da0ced00;
         border-radius: 50%;
         object-fit: cover;
+    }
+
+    .extends-information p {
+        font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+        font-size: xx-small;
+        cursor: default;
+        color: #d9d9d9; 
+        padding: 10px;
+        font-size: 30px;
+    }
 
     .Hero {
         padding: 30px;
