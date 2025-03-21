@@ -573,3 +573,19 @@ header nav p {
 html {
     scroll-behavior: smooth; /* Activa el desplazamiento suave */
 }
+
+#US, #News {
+    scroll-margin-top: 250px; /* Ajusta la cantidad según necesites */
+}
+
+#Hero {
+    scroll-margin-top: 350px; /* Ajusta la cantidad según necesites */
+}
+
+#Games {
+    scroll-margin-top: 100px; /* Ajusta la cantidad según necesites */
+}
+
+#Information {
+    scroll-margin-top: 50px; /* Ajusta la cantidad según necesites */
+}
