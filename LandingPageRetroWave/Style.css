@@ -588,23 +588,23 @@ header nav p {
 /* Transition */
 
 html {
-    scroll-behavior: smooth; /* Activa el desplazamiento suave */
+    scroll-behavior: smooth; 
 }
 
 #US, #News {
-    scroll-margin-top: 250px; /* Ajusta la cantidad según necesites */
+    scroll-margin-top: 250px; 
 }
 
 #Hero {
-    scroll-margin-top: 350px; /* Ajusta la cantidad según necesites */
+    scroll-margin-top: 350px; 
 }
 
 #Games {
-    scroll-margin-top: 100px; /* Ajusta la cantidad según necesites */
+    scroll-margin-top: 100px; 
 }
 
 #Information {
-    scroll-margin-top: 50px; /* Ajusta la cantidad según necesites */
+    scroll-margin-top: 50px; 
 }
 
 /* Moviles */
@@ -644,6 +644,14 @@ html {
     nav {
         background-color: #0000007a;
     }
+
+    header nav .logo img {
+        display: flex;
+        width: 80px;
+        height: 80px;
+        box-shadow: 0 4px 6px #da0ced00;
+        border-radius: 50%;
+        object-fit: cover;
 
     .Hero {
         padding: 30px;
