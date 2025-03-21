@@ -567,3 +567,9 @@ header nav p {
     text-align: justify;
     font-family: Arial, sans-serif;
 }
+
+/* Transition */
+
+html {
+    scroll-behavior: smooth; /* Activa el desplazamiento suave */
+}
