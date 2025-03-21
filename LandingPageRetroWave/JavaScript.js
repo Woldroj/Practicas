@@ -353,22 +353,19 @@ const menuLinks = document.querySelectorAll('.menu li a');
 menuLinks.forEach(link => {
     link.addEventListener('click', function() {
         const menu = document.getElementById('menu');
-        menu.classList.remove('active'); // Oculta el menú al seleccionar una opción
+        menu.classList.remove('active');
     });
 });
 
-// Función para comprobar si una sección está visible en la pantalla
 function checkSectionVisibility() {
     const sections = document.querySelectorAll('section');
     sections.forEach(section => {
         const rect = section.getBoundingClientRect();
         if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
-            // Si la sección es visible, hacemos algo aquí (por ejemplo, ocultar el menú)
             const menu = document.getElementById('menu');
-            menu.classList.remove('active'); // El menú desaparece cuando llegamos a una sección
+            menu.classList.remove('active'); 
         }
     });
 }
 
-// Comprobamos la visibilidad de las secciones cuando el usuario se desplaza
 window.addEventListener('scroll', checkSectionVisibility);
