@@ -74,6 +74,23 @@ header nav p {
     color:  #ED370C;
 }
 
+.menu-toggle {
+    justify-content: space-between;
+    font-size: 30px;
+    display: none;
+    color: #d9d9d9;
+    position: absolute;
+    z-index: 1002;
+    cursor: pointer;
+}
+
+.menu.active {
+    display: block;
+    opacity: 1;
+    visibility: visible;
+}
+
+
 /* Hero Section */
 
 .Hero {
@@ -588,4 +605,82 @@ html {
 
 #Information {
     scroll-margin-top: 50px; /* Ajusta la cantidad según necesites */
+}
+
+/* Moviles */
+
+@media screen and (max-width: 768px) {
+    
+    .menu-toggle {
+        display: flex;
+        position: relative;
+    }
+
+    .menu {
+        display: none; 
+        position: absolute; 
+        top: 50px; 
+        right: 20px; 
+        background: rgba(0, 0, 0, 0.7); 
+        padding: 20px;
+        border-radius: 10px;
+        flex-direction: column; 
+        z-index: 999; 
+    }
+    
+    .menu li {
+        margin: 10px 0;
+    }
+
+    .menu.active {
+        display: block;  
+    }
+    
+    header nav p {
+        display: none;
+    }
+    
+
+    nav {
+        background-color: #0000007a;
+    }
+
+    .Hero {
+        padding: 30px;
+    }
+
+    .GamesSection, .News, .Information, .Support, .US {
+        margin: 5%;
+        padding: 10px;
+    }
+
+    .carrusel-images img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .container-imageRt, .container-imageRc, .container-imageI {
+        width: 100%;
+        height: auto;
+    }
+
+    .support-form input, .support-form textarea {
+        width: 96%;
+    }
+
+    .image-box .text {
+        display:none;
+        flex: 1;
+        text-align: right;
+    }
+
+    .image-box {
+        width: 205px;
+    }
+
+    .imagesRt, .imagesRc, .imagesI, .imagesSt, .imagesSh, .imagesAd, .imagesF, .imagesT, .imagesGN {
+        align-items: center;
+    }
+
+    
 }

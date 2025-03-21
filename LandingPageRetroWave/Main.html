@@ -24,7 +24,8 @@
                 Nombre 
                 Empresa
             </p>
-            <ul class="menu">
+            <p class="menu-toggle" id="menu-toggle">&#9776;</p>
+            <ul class="menu" id="menu">
                 <li><a href="#News">Novedades</a></li>
                 <li><a href="#Games">Juegos</a></li>
                 <li><a href="#Information">Noticias</a></li>
@@ -47,7 +48,7 @@
     
 
     <section class="Hero" id="Hero">
-        <h1>Bienvenido a nuestra pagina web</h1>
+        <h1 id="welcomeMessage">Bienvenido a nuestra pagina web</h1>
         <p>Explora desde juegos retros hasta novedades</p>
         <button class="hero-btn" onclick="openModal('loginModal')">Log In</button>
         <button class="hero-btn" onclick="openModal('registerModal')">Sign In</button>
@@ -57,8 +58,8 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('loginModal')">&times;</span>
             <h2>Iniciar Sesion</h2>
-            <input type="text" placeholder="Usuario" />
-            <input type="password" placeholder="Contraseña" />
+            <input type="text" id="loginUser" placeholder="Usuario" />
+            <input type="password" id="loginPassword" placeholder="Contraseña" />
             <button onclick="login()">Entrar</button>
         </div>
     </div>
@@ -67,9 +68,9 @@
         <div class="modal-content">
             <span class="close" onclick="closeModal('registerModal')">&times;</span>
             <h2>Registrarse</h2>
-            <input type="text" placeholder="Usuario"/>
-            <input type="email" placeholder="Correo Electrónico"/>
-            <input type="password" placeholder="Contraseña"/>
+            <input type="text" id="registerUser" placeholder="Usuario"/>
+            <input type="email" id="registerEmail" placeholder="Correo Electrónico"/>
+            <input type="password" id="registerPassword" placeholder="Contraseña"/>
             <button onclick="register()">Registrarse</button>
         </div>
     </div>

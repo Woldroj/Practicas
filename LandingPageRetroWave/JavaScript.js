@@ -4,20 +4,26 @@ const totalImages = images.length;
 const wrapper = document.querySelector('.carrusel-wrapper');
 const carruselImages = document.querySelector('.carrusel-images');
 
-// Clone the images to put the first the last one 
+// Clone the first image to the end, only once at the beginning
 function clonacion() {
-    images.forEach(img => {
-        const clone = img.cloneNode(true); // Clone each images
-        carruselImages.appendChild(clone); // Add the images in the end
-    });
+    const firstImage = images[0];
+    const clone = firstImage.cloneNode(true); // Clone the first image
+    carruselImages.appendChild(clone); // Add the clone at the end
 }
 
 // Move the carousel to the right
 function moveNext() {
-    clonacion();
     currentIndex++;
-    // Upadate the movement
-    updateCarrusel();
+    if (currentIndex === totalImages) {
+        // If we reach the last image, reset to the first image
+        setTimeout(() => {
+            // Reset the index and move to the first image
+            currentIndex = 0;
+            updateCarrusel();
+        }, 500); // Wait a bit to make sure the transition is smooth
+    } else {
+        updateCarrusel();
+    }
 }
 
 // Function to Update the movement
@@ -27,7 +33,10 @@ function updateCarrusel() {
 }
 
 // Start the movement 
-setInterval(moveNext, 3000); // Slide each 3 seconds
+setInterval(moveNext, 3000); // Slide every 3 seconds
+
+// Initially, clone the first image at the start
+clonacion();
 
 
 
@@ -286,23 +295,28 @@ $(document).ready(function(){
 
 function openModal(id) {
     document.getElementById(id).style.display = 'flex';
-    document.body.style.overflow = 'hidden';
+    document.body.style.overflow = 'hidden'; 
 }
 
 function closeModal(id) {
     document.getElementById(id).style.display = 'none';
-    document.body.style.overflow = '';
+    document.body.style.overflow = ''; 
 }
 
 function register() {
     let user = document.getElementById("registerUser").value;
     let email = document.getElementById("registerEmail").value;
     let password = document.getElementById("registerPassword").value;
-    
+
     if (user && email && password) {
+        
         localStorage.setItem("user", JSON.stringify({ username: user, email: email, password: password }));
-        alert("Registro exitoso. Ahora puedes iniciar sesión.");
-        closeModal("registerModal");
+
+        alert("Registro exitoso. Se ha iniciado sesión automáticamente.");
+        document.getElementById("welcomeMessage").innerText = "Bienvenido, " + user;
+
+        hideButtons(); 
+        closeModal("registerModal"); 
     } else {
         alert("Por favor, completa todos los campos.");
     }
@@ -312,12 +326,25 @@ function login() {
     let user = document.getElementById("loginUser").value;
     let password = document.getElementById("loginPassword").value;
     let storedUser = JSON.parse(localStorage.getItem("user"));
-    
+
     if (storedUser && user === storedUser.username && password === storedUser.password) {
         alert("Inicio de sesión exitoso.");
         document.getElementById("welcomeMessage").innerText = "Bienvenido, " + storedUser.username;
-        closeModal("loginModal");
+        
+        hideButtons(); 
+        closeModal("loginModal"); 
     } else {
         alert("Usuario o contraseña incorrectos.");
     }
 }
+
+function hideButtons() {
+    document.querySelectorAll('.hero-btn').forEach(btn => btn.style.display = 'none');
+}
+
+// Menu hamburguesa
+
+document.getElementById('menu-toggle').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.toggle('active');
+});
