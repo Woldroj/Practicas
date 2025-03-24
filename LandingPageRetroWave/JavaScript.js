@@ -408,8 +408,13 @@ let carrito = [];
         }
 
         function comprar() {
-            alert("Compra exitosa");
-            carrito = [];
-            actualizarCarrito();
-            cerrarCarrito();
+            if (carrito.length == 0) {
+                alert("Añada Articulos");
+                cerrarCarrito;
+            }else {
+                alert("Compra exitosa");
+                carrito = [];
+                actualizarCarrito();
+                cerrarCarrito();
+            }
         }
