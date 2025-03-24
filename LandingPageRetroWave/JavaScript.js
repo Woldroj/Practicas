@@ -293,6 +293,8 @@ $(document).ready(function(){
 
 // Hero Section
 
+let logged = false;
+
 function openModal(id) {
     document.getElementById(id).style.display = 'flex';
     document.body.style.overflow = 'hidden'; 
@@ -317,6 +319,7 @@ function register() {
 
         hideButtons(); 
         closeModal("registerModal"); 
+        logged = true;
     } else {
         alert("Por favor, completa todos los campos.");
     }
@@ -333,6 +336,7 @@ function login() {
         
         hideButtons(); 
         closeModal("loginModal"); 
+        logged = true;
     } else {
         alert("Usuario o contraseña incorrectos.");
     }
@@ -408,9 +412,13 @@ let carrito = [];
         }
 
         function comprar() {
+
+            
             if (carrito.length == 0) {
                 alert("Añada Articulos");
                 cerrarCarrito;
+            }else if (logged == false) {
+                alert("Logueate o Registrate");
             }else {
                 alert("Compra exitosa");
                 carrito = [];
