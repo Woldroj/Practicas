@@ -376,6 +376,7 @@ let carrito = [];
 
         function agregarAlCarrito(nombre, precio) {
             carrito.push({ nombre, precio });
+            alert("Agregado al carrito");
             actualizarCarrito();
         }
 

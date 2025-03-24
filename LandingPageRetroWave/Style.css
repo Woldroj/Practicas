@@ -327,6 +327,7 @@ header nav .carrito {
 }
 
 .compra {
+    cursor: pointer;
     border: solid;
     background-color: #64105788;
     padding: 5px;
