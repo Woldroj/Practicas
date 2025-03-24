@@ -54,6 +54,22 @@ header nav p {
     margin-right: 10%;
 }
 
+header nav .carrito {
+    justify-content: center;
+    padding: 10px;
+    color:#d9d9d9;
+    font-family: 'Pixel';
+    font-size: 15px;
+    border: solid;
+    background-color: #da0ced8d;
+    border-radius: 10px;
+    transform: all 0.3 ease-in-out;
+}
+
+.carrito:hover {
+    background-color: #0fe6e686;
+}
+
 .menu {
     display: flex;
     list-style: none;
@@ -305,9 +321,73 @@ header nav p {
     border-radius: 10px;
 }
 
-.image-box .text {
+.image-box .text, .compra {
     flex: 1;
     text-align: right;
+}
+
+.compra {
+    border: solid;
+    background-color: #64105788;
+    padding: 5px;
+    border-radius: 10px;
+    margin-left: 35%;
+    text-align: center;
+    transform: background-color 0.3 ease-in-out;
+}
+
+.compra:hover {
+    background-color: #0c534f86;
+}
+
+#carrito-container {
+    position: fixed;
+    top: 90px;
+    right: 37px;
+    background-color: rgba(0, 0, 0, 0.658);
+    border-radius: 10px;
+    padding: 10px;
+    border: 1px solid black;
+    display: none;
+    z-index: 100000;
+}
+
+.carrito-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+}
+
+.carrito-item .remove {
+    cursor: pointer;
+    color: red;
+}
+
+.comprar {
+    background-color: #64105788;
+    color: #d9d9d9;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Pixel', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+}
+
+.cerrar {
+    background-color: #64105788;
+    color: #d9d9d9;
+    border: none;
+    padding: 10px 20px;
+    font-family: 'Pixel', sans-serif;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
 }
 
 .container-text {

@@ -31,9 +31,19 @@
                 <li><a href="#Information">Noticias</a></li>
                 <li><a href="#US">Nosotros</a></li>
                 <li><a href="#Support">Soporte</a></li>
+                <li><button onclick="mostrarCarrito()" class="carrito">Carrito</button></li>
             </ul>
+           
         </nav>
     </header>
+
+    <div id="carrito-container">
+        <h2>Carrito</h2>
+        <div id="carrito"></div>
+        <p>Total: <span id="total">0.00</span> €</p>
+        <button onclick="comprar()" class="comprar">Pagar</button>
+        <button onclick="cerrarCarrito()" class="cerrar">Cancelar</button>
+    </div>
 
     <br>
     <br>
@@ -138,18 +148,21 @@
                             <img src="./Imagenes_Contenido/Imagenes_Retro/Contra.jpeg">
                         </a>
                         <span class="text">Contra</span>
+                        <div class="compra" onclick="agregarAlCarrito('Contra', 5.99)">5.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://www.minijuegos.com/juego/pacman" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Retro/PacMan.png">
                         </a>
                         <span class="text">Pacman</span>
+                        <div class="compra" onclick="agregarAlCarrito('Pacman', 4.99)">4.99 €</div>
                     </div>
                     <div class="image-box">
-                        <a href="https://www.minijuegos.com/juego/pacman" target="_blank">
+                        <a href="https://www.minijuegos.com/juego/donkey-kong" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Retro/Donke_Kong.jpeg">
                         </a>
                         <span class="text">Donkey Kong</span>
+                        <div class="compra" onclick="agregarAlCarrito('Donkey Kong', 4.99)">4.99 €</div>
                     </div>
                 </div>
             </div>
@@ -169,24 +182,28 @@
                             <img src="./Imagenes_Contenido/Imagenes_Racing/F1.jpeg">
                         </a>
                         <span class="text">Formula1</span>
+                        <div class="compra" onclick="agregarAlCarrito('F1', 69.99)">69.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://www.gran-turismo.com/es/" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Racing/Gran_turismo.jpeg">
                         </a>
                         <span class="text">Gran Turismo</span>
+                        <div class="compra" onclick="agregarAlCarrito('Gran Turismo', 79.99)">79.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://www.nintendo.com/es-es/Juegos/Juegos-de-Nintendo-Switch/Mario-Kart-8-Deluxe-1173281.html?srsltid=AfmBOor9I0NrFTMmIQp4hQKwvvPNyRMqimb2hyK6h3vSMIbg_aL_-yjn" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Racing/Mario_Kart.jpeg">
                         </a>
                         <span class="text">Mario Kart</span>
+                        <div class="compra" onclick="agregarAlCarrito('Mario Kart', 59.99)">59.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://www.ea.com/es-es/games/need-for-speed/need-for-speed-heat" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Racing/Need_for_Speed.jpeg">
                         </a>
                         <span class="text">Need for Speed</span>
+                        <div class="compra" onclick="agregarAlCarrito('Need For Speed', 69.99)">69.99 €</div>
                     </div>
                 </div>
             </div>
@@ -206,30 +223,35 @@
                             <img src="./Imagenes_Contenido/Imagenes_Indie/Celeste.jpeg">
                         </a>
                         <span class="text">Celeste</span>
+                        <div class="compra" onclick="agregarAlCarrito('Celeste', 19.50)">19.50 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/app/367520/Hollow_Knight/?l=spanish" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Indie/Hollow_Knight_2.jpeg">
                         </a>
                         <span class="text">Hollow Knight</span>
+                        <div class="compra" onclick="agregarAlCarrito('Hollow Knight', 14.79)">14.79 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/agecheck/app/219150/?l=spanish" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Indie/Hotline_Miami.jpeg">
                         </a>
                         <span class="text">Hotline Miame</span>
+                        <div class="compra" onclick="agregarAlCarrito('Hotline Miami', 9.75)">9.75 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/app/413150/Stardew_Valley/" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Indie/Stardew_Valley.jpeg">
                         </a>
                         <span class="text">Stardew Valley</span>
+                        <div class="compra" onclick="agregarAlCarrito('Stardew Valley', 13.99)">13.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/app/210970/The_Witness/" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Indie/The_Witness.jpeg">
                         </a>
                         <span class="text">The Witness</span>
+                        <div class="compra" onclick="agregarAlCarrito('The Witness', 36.99)">36.99 €</div>
                     </div>
                 </div>
             </div>
@@ -249,18 +271,21 @@
                             <img src="./Imagenes_Contenido/Imagenes_Strategy/Age_Of_Empire_2.jpeg">
                         </a>
                         <span class="text">Age of Empire 2</span>
+                        <div class="compra" onclick="agregarAlCarrito('Age of Empire 2', 32.99)">32.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://starcraft2.blizzard.com/es-es/" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Strategy/Starcraft_2.jpeg">
                         </a>
                         <span class="text">Starcraft 2</span>
+                        <div class="compra" onclick="agregarAlCarrito('Starcraft 2', 0)">Gratis</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/agecheck/app/200510/?l=spanish" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Strategy/XCOM.jpeg">
                         </a>
                         <span class="text">XCOM</span>
+                        <div class="compra" onclick="agregarAlCarrito('XCOM', 19.99)">19.99 €</div>
                     </div>
                 </div>
             </div>
@@ -280,30 +305,35 @@
                             <img src="./Imagenes_Contenido/Imagenes_Shooters/Call_of_duty.jpeg">
                         </a>
                         <span class="text">Call of Duty</span>
+                        <div class="compra" onclick="agregarAlCarrito('Call of Duty Black ops 6', 59.99)">59.99 €</div>
                     </div>
                     <div class="image-box">
-                        <a href="https://bethesda.net/es/game/doom" target="_blank">
+                        <a href="https://store.steampowered.com/app/782330/DOOM_Eternal/" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Shooters/Doom.jpeg">
                         </a>
                         <span class="text">Doom</span>
+                        <div class="compra" onclick="agregarAlCarrito('Doom Eternal', 39.99)">39.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://www.fortnite.com/?lang=es-ES" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Shooters/Fortnite.jpeg">
                         </a>
-                        <span class="text">Fortnite<span>
+                        <span class="text">Fortnite</span>
+                        <div class="compra" onclick="agregarAlCarrito('Fortnite', 0)">Gratis</div>
                     </div>
                     <div class="image-box">
                         <a href="https://overwatch.blizzard.com/es-es/" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Shooters/OverWatch2.jpeg">
                         </a>
                         <span class="text">Overwatch 2</span>
+                        <div class="compra" onclick="agregarAlCarrito('Overwatch 2', 0)">Gratis</div>
                     </div>
                     <div class="image-box">
                         <a href="https://www.ubisoft.com/es-es/game/rainbow-six/siege" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Shooters/Rainbow.jpeg">
                         </a>
                         <span class="text">Rainbow six seige</span>
+                        <div class="compra" onclick="agregarAlCarrito('Rainbow Six Siege', 19.99)">19.99 €</div>
                     </div>
                 </div>
             </div>
@@ -323,24 +353,28 @@
                             <img src="./Imagenes_Contenido/Imagenes_Adventure/Red_Dead_Demption2.jpeg">
                         </a>
                         <span class="text">Red Dead Demption 2</span>
+                        <div class="compra" onclick="agregarAlCarrito('Red Dead Demption 2', 59.99)">59.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/agecheck/app/292030/?l=spanish" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Adventure/The_witcher3.jpeg">
                         </a>
                         <span class="text">The Witcher 3</span>
+                        <div class="compra" onclick="agregarAlCarrito('The Witcher 3', 29.99)">29.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/app/2531310/The_Last_of_Us_Parte_II_Remastered/?l=spanish" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Adventure/TLOU2.jpeg">
                         </a>
                         <span class="text">The Last Of Us 2</span>
+                        <div class="compra" onclick="agregarAlCarrito('The Last Of Us 2', 49.99)">49.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/app/1659420/UNCHARTED_Coleccin_Legado_de_ladrones/?l=latam" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Adventure/uncharted4.jpeg">
                         </a>
                         <span class="text">Uncharted 4</span>
+                        <div class="compra" onclick="agregarAlCarrito('Uncharted 4', 49.99)">49.99 €</div>
                     </div>
                 </div>
             </div>
@@ -360,18 +394,21 @@
                             <img src="./Imagenes_Contenido/Imagenes_Fighting/MortalKombat.jpeg">
                         </a>
                         <span class="text">Mortal Kombat xi</span>
+                        <div class="compra" onclick="agregarAlCarrito('Mortal Kombat XI', 49.99)">49.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/app/310950/Street_Fighter_V/?l=spanish" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Fighting/Street_Fighting.jpeg">
                         </a>
-                        <span class="text">Street Fighter</span>
+                        <span class="text">Street Fighter V</span>
+                        <div class="compra" onclick="agregarAlCarrito('Street Fighter V', 19.99)">19.99 €</div>
                     </div>
                     <div class="image-box">
-                        <a href="https://es.bandainamcoent.eu/tekken/tekken-7" target="_blank">
+                        <a href="https://store.steampowered.com/app/389730/TEKKEN_7/" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Fighting/Tekken7.jpeg">
                         </a>
                         <span class="text">Tekken 7</span>
+                        <div class="compra" onclick="agregarAlCarrito('Tekken 7', 39.99)">39.99 €</div>
                     </div>
                 </div>
             </div>
@@ -391,36 +428,42 @@
                             <img src="./Imagenes_Contenido/Imagenes_Terror/Amnesia.jpg">
                         </a>
                         <span class="text">Amnesia</span>
+                        <div class="compra" onclick="agregarAlCarrito('Amnesia', 19.50)">19.50 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/agecheck/app/1092660/?l=spanish" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Terror/Blair witch.jpeg">
                         </a>    
                         <span class="text">Blair Witcher</span>
+                        <div class="compra" onclick="agregarAlCarrito('Blair Witch', 29.99)">29.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/app/238320/Outlast/?l=spanish" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Terror/Outlast.jpeg">
                         </a>
                         <span class="text">Outlast</span>
+                        <div class="compra" onclick="agregarAlCarrito('Outlast', 19.50)">19.50 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://pt-for-pc.softonic.com" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Terror/PT.jpeg">
                         </a>
                         <span class="text">P.T</span>
+                        <div class="compra" onclick="agregarAlCarrito('P.T', 0)">Gratis</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/agecheck/app/883710/?l=spanish" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Terror/Resident_evil2.jpg">
                         </a>
-                        <span class="text">Residen Evil 3</span>
+                        <span class="text">Residen Evil 2</span>
+                        <div class="compra" onclick="agregarAlCarrito('Resident Evil 2', 39.99)">39.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/agecheck/app/2124490/?l=spanish" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_Terror/Silent_hill2.jpeg">
                         </a>
                         <span class="text">Silent Hill 2</span>
+                        <div class="compra" onclick="agregarAlCarrito('Silent Hill 2', 69.99)">69.99 €</div>
                     </div>
                 </div>
             </div>
@@ -440,24 +483,28 @@
                             <img src="./Imagenes_Contenido/Imagenes_GraphicNovel/LifeIsStrange.jpeg">
                         </a>
                         <span class="text">Life is Strange</span>
+                        <div class="compra" onclick="agregarAlCarrito('Life Is Strange', 19.99)">19.99 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/app/481510/Night_in_the_Woods/" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_GraphicNovel/Night_in_the_wood.jpeg">
                         </a>
                         <span class="text">Night in the woods</span>
+                        <div class="compra" onclick="agregarAlCarrito('Night in the Woods', 19.50)">19.50 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/app/1574820/Until_Then/" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_GraphicNovel/unitl_then2.jpeg">
                         </a>
                         <span class="text">Until Then</span>
+                        <div class="compra" onclick="agregarAlCarrito('Until Then', 19.50)">19.50 €</div>
                     </div>
                     <div class="image-box">
                         <a href="https://store.steampowered.com/app/388880/Oxenfree/?l=spanish" target="_blank">
                             <img src="./Imagenes_Contenido/Imagenes_GraphicNovel/Oxenfree.jpeg">
                         </a>
                         <span class="text">Oxenfree</span>
+                        <div class="compra" onclick="agregarAlCarrito('Oxenfree', 9.75)">9.75 €</div>
                     </div>
                 </div>
             </div>
