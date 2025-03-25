@@ -310,15 +310,32 @@ function register() {
     let email = document.getElementById("registerEmail").value;
     let password = document.getElementById("registerPassword").value;
 
-    if (user && email && password) {
-        
-        localStorage.setItem("user", JSON.stringify({ username: user, email: email, password: password }));
+    let users = JSON.parse(localStorage.getItem("users")) || [];
 
-        alert("Registro exitoso. Se ha iniciado sesión automáticamente.");
+    if (users.some(u => u.email === email)) {
+        alert("Este correo ya está registrado.");
+        return;
+    }
+
+    if (password.length < 8) {
+        alert("Minimo 8 caracteres");
+        return;
+    }
+
+    if (password.includes(" ")) {
+        alert("La contraseña no puede contener espacios")
+        return;
+    }
+
+    if (user && email && password) {
+        users.push({ username: user, email: email, password: password });
+        localStorage.setItem("users", JSON.stringify(users));
+
+        alert("Registro valido.");
         document.getElementById("welcomeMessage").innerText = "Bienvenido, " + user;
 
-        hideButtons(); 
-        closeModal("registerModal"); 
+        hideButtons();
+        closeModal("registerModal");
         logged = true;
     } else {
         alert("Por favor, completa todos los campos.");
@@ -328,14 +345,16 @@ function register() {
 function login() {
     let user = document.getElementById("loginUser").value;
     let password = document.getElementById("loginPassword").value;
-    let storedUser = JSON.parse(localStorage.getItem("user"));
+    let users = JSON.parse(localStorage.getItem("users")) || [];
 
-    if (storedUser && user === storedUser.username && password === storedUser.password) {
+    let foundUser = users.find(u => u.username === user && u.password === password);
+
+    if (foundUser) {
         alert("Inicio de sesión exitoso.");
-        document.getElementById("welcomeMessage").innerText = "Bienvenido, " + storedUser.username;
-        
-        hideButtons(); 
-        closeModal("loginModal"); 
+        document.getElementById("welcomeMessage").innerText = "Bienvenido, " + foundUser.username;
+
+        hideButtons();
+        closeModal("loginModal");
         logged = true;
     } else {
         alert("Usuario o contraseña incorrectos.");
@@ -359,6 +378,11 @@ menuLinks.forEach(link => {
         const menu = document.getElementById('menu');
         menu.classList.remove('active');
     });
+});
+
+document.getElementById('cart').addEventListener('click', function() {
+    const menu = document.getElementById('menu');
+    menu.classList.remove('active'); 
 });
 
 function checkSectionVisibility() {

@@ -54,7 +54,7 @@ header nav p {
     margin-right: 10%;
 }
 
-header nav .carrito {
+header nav .cart {
     justify-content: center;
     padding: 10px;
     color:#d9d9d9;
@@ -66,7 +66,7 @@ header nav .carrito {
     transform: all 0.3 ease-in-out;
 }
 
-.carrito:hover {
+.cart:hover {
     background-color: #0fe6e686;
 }
 
@@ -294,7 +294,7 @@ header nav .carrito {
     flex-direction: column; 
     align-items: stretch; 
     gap: 10px;
-    width: 700px; 
+    width: 1000px; 
 }
 
 .image-box {
@@ -324,6 +324,10 @@ header nav .carrito {
 .image-box .text, .compra {
     flex: 1;
     text-align: right;
+}
+
+.image-box .text {
+    margin-right: 20%;
 }
 
 .compra {
