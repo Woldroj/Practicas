@@ -72,6 +72,7 @@ $(document).ready(function() {
     }
 
     function attachEventHandlers() {
+        // Show Retro Games
         $('.container-imageRt').click(function() {
             $('.GamesSection .Games .container-imageRt').hide();
             $('.GamesSection .Games .container-imageRc').hide();
@@ -91,6 +92,7 @@ $(document).ready(function() {
                     restoreAll(); 
                 });
         });
+        // Show Racing Games
         $('.container-imageRc').click(function() {
             $('.GamesSection .Games .container-imageRt').hide();
             $('.GamesSection .Games .container-imageRc').hide();
@@ -110,6 +112,7 @@ $(document).ready(function() {
                     restoreAll(); 
                 });
         });
+        // Show Indie Games
         $('.container-imageI').click(function() {
             $('.GamesSection .Games .container-imageRt').hide();
             $('.GamesSection .Games .container-imageRc').hide();
@@ -129,6 +132,7 @@ $(document).ready(function() {
                     restoreAll(); 
                 });
         });
+        // Show Strategy Games
         $('.container-imageSt').click(function() {
             $('.GamesSection .Games .container-imageRt').hide();
             $('.GamesSection .Games .container-imageRc').hide();
@@ -148,6 +152,7 @@ $(document).ready(function() {
                     restoreAll(); 
                 });
         });
+        // Show Shooter Games
         $('.container-imageSh').click(function() {
             $('.GamesSection .Games .container-imageRt').hide();
             $('.GamesSection .Games .container-imageRc').hide();
@@ -167,6 +172,7 @@ $(document).ready(function() {
                     restoreAll(); 
                 });
         });
+        // Show Adventure Games
         $('.container-imageAd').click(function() {
             $('.GamesSection .Games .container-imageRt').hide();
             $('.GamesSection .Games .container-imageRc').hide();
@@ -186,6 +192,7 @@ $(document).ready(function() {
                     restoreAll(); 
                 });
         });
+        // Show Fighting Games
         $('.container-imageF').click(function() {
             $('.GamesSection .Games .container-imageRt').hide();
             $('.GamesSection .Games .container-imageRc').hide();
@@ -205,6 +212,7 @@ $(document).ready(function() {
                     restoreAll(); 
                 });
         });
+        // Show Terror Games
         $('.container-imageT').click(function() {
             $('.GamesSection .Games .container-imageRt').hide();
             $('.GamesSection .Games .container-imageRc').hide();
@@ -224,6 +232,7 @@ $(document).ready(function() {
                     restoreAll(); 
                 });
         });
+        // Show Graphic Novel Games
         $('.container-imageGN').click(function() {
             $('.GamesSection .Games .container-imageRt').hide();
             $('.GamesSection .Games .container-imageRc').hide();
@@ -433,20 +442,132 @@ let carrito = [];
 
         function cerrarCarrito() {
             document.getElementById("carrito-container").style.display = "none";
+            $(".buy-section").hide();
+        }
+
+        function paidComplete() {
+            const card = document.getElementById('credit-card').value;
+            const date = document.getElementById('date').value;
+            const cvv = document.getElementById('cvv').value;
+            const conditions = document.getElementById('conditions').checked;
+
+            if (!card || !date || !cvv || !email || !conditions) {
+                alert('Por favor, completa todos los campos.');
+                return;
+            }
+
+            alert('Compra completada con éxito!');
+            document.querySelector('.buy-section').style.display = 'none'; 
+
+        }
+
+        function buyForGift() {
+            
+            const card = document.getElementById('credit-card').value;
+            const date = document.getElementById('date').value;
+            const cvv = document.getElementById('cvv').value;
+            const conditions = document.getElementById('conditions').checked;
+
+            if (!card || !date || !cvv || !email || !conditions) {
+                alert('Por favor, completa todos los campos.');
+                return;
+            }
+
+            document.getElementById('giftForm').classList.remove('hidden');
+            document.getElementById('credit-card').classList.add('hidden');
+            document.getElementById('date').classList.add('hidden');
+            document.getElementById('cvv').classList.add('hidden');
+            document.getElementById('conditions').classList.add('hidden');
+            document.querySelector('.conditions-text').style.display = 'none'; 
+            document.querySelector('button.paid').classList.add('hidden');
+            document.querySelector('button.gift').classList.add('hidden');
+            document.querySelector('button.cancel').classList.add('hidden');
+
+           
+        }
+
+        function confirmGiftPurchase() {
+            const giftEmail = document.getElementById('giftEmail').value;
+
+            if (!giftEmail) {
+                alert('Por favor, ingresa un correo electrónico para el regalo.');
+                return;
+            }
+
+            alert(`Compra confirmada para regalo. Se enviará a: ${giftEmail}`);
+            document.querySelector('.buy-section').style.display = 'none'; 
+        }
+
+        function validateCVV(input) {
+    
+            input.value = input.value.replace(/[^0-9]/g, '');
+
+            if (input.value.length > 3) {
+                input.value = input.value.slice(0, 3);
+            }
+        }
+
+        function formatDate(input) {
+            let value = input.value.replace(/\D/g, '');
+            
+            if (value.length > 2) {
+                value = value.slice(0, 2) + '/' + value.slice(2, 4);
+            }
+            
+            if (value.length > 5) {
+                value = value.slice(0, 5);
+            }
+        
+            input.value = value;
+        }
+
+        function formatCreditCard(input) {
+            let value = input.value.replace(/\D/g, '');
+            
+            value = value.replace(/(\d{4})(?=\d)/g, '$1 ');
+        
+            if (value.length > 19) { 
+                value = value.slice(0, 19);
+            }
+        
+            input.value = value;
+        }
+
+        function closePaymentSection() {
+            document.querySelector('.buy-section').style.display = 'none'; 
+            document.getElementById("carrito-container").style.display = "block";
+        }
+
+        function closeGiftForm() {
+            document.getElementById('giftForm').classList.add('hidden');
+            document.getElementById('credit-card').classList.remove('hidden');
+            document.getElementById('date').classList.remove('hidden');
+            document.getElementById('cvv').classList.remove('hidden');
+            document.getElementById('conditions').classList.remove('hidden');
+            document.querySelector('button.paid').classList.remove('hidden');
+            document.querySelector('button.gift').classList.remove('hidden');
+            document.querySelector('button.cancel').classList.remove('hidden');
         }
 
         function comprar() {
 
             
-            if (carrito.length == 0) {
+            if (logged == false) {
+                alert("Logueate o Registrate");
+            }else if (carrito.length == 0) {
                 alert("Añada Articulos");
                 cerrarCarrito;
-            }else if (logged == false) {
-                alert("Logueate o Registrate");
             }else {
-                alert("Compra exitosa");
-                carrito = [];
-                actualizarCarrito();
-                cerrarCarrito();
+
+                $(".buy-section").show();
+                document.getElementById("carrito-container").style.display = "none";
+
+                validateCVV;
+                formatDate;
+                paidComplete;
+                buyForGift;
+                confirmGiftPurchase;
+                closePaymentSection;
+                closeGiftForm;
             }
         }

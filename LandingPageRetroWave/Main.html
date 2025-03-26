@@ -144,23 +144,17 @@
                 </div>
                 <div class="imagesRt">
                     <div class="image-box">
-                        <a href="https://www.minijuegos.com/juego/contra" target="_blank">
-                            <img src="./Imagenes_Contenido/Imagenes_Retro/Contra.jpeg">
-                        </a>
+                        <img src="./Imagenes_Contenido/Imagenes_Retro/Contra.jpeg">
                         <span class="text">Contra</span>
                         <div class="compra" onclick="agregarAlCarrito('Contra', 5.99)">5.99 €</div>
                     </div>
                     <div class="image-box">
-                        <a href="https://www.minijuegos.com/juego/pacman" target="_blank">
-                            <img src="./Imagenes_Contenido/Imagenes_Retro/PacMan.png">
-                        </a>
+                        <img src="./Imagenes_Contenido/Imagenes_Retro/PacMan.png">
                         <span class="text">Pacman</span>
                         <div class="compra" onclick="agregarAlCarrito('Pacman', 4.99)">4.99 €</div>
                     </div>
                     <div class="image-box">
-                        <a href="https://www.minijuegos.com/juego/donkey-kong" target="_blank">
-                            <img src="./Imagenes_Contenido/Imagenes_Retro/Donke_Kong.jpeg">
-                        </a>
+                        <img src="./Imagenes_Contenido/Imagenes_Retro/Donke_Kong.jpeg">
                         <span class="text">Donkey Kong</span>
                         <div class="compra" onclick="agregarAlCarrito('Donkey Kong', 4.99)">4.99 €</div>
                     </div>
@@ -659,6 +653,25 @@
     <br>
     <br>
     <br>
+
+    <div class="buy-section" id="buy-section">
+        <h2>Pago</h2>
+        <input type="text" id="credit-card" placeholder="1234 5678 1234 5678" maxlength="19" oninput="formatCreditCard(this)"/>
+        <input type="text" id="date" placeholder="mm/YY" maxlength="5" oninput="formatDate(this)"/>
+        <input type="text" id="cvv" placeholder="123" maxlength="3" oninput="validateCVV(this)"/>
+        <p class="conditions-text"><input type="checkbox" id="conditions">He leido y aceptado los terminos y condiciones de la empresa</p>
+        <button onclick="paidComplete()" class="paid">Pagar</button>
+        <button onclick="buyForGift()" class="gift">Comprar para regalo</button>
+        <button onclick="closePaymentSection()" class="cancel">Cancelar</button>
+    
+        <div id="giftForm" class="hidden">
+            <label for="giftEmail">Introduce el correo electronico del afortunado:</label>
+            <input type="email" id="giftEmail" placeholder="Correo electrónico para regalo">
+            <button onclick="confirmGiftPurchase()" class="buygift">Confirmar compra para regalo</button>
+            <button onclick="closeGiftForm()" class="cancel">Cancelar</button>
+        </div>
+    </div>
+    
 
     <!-- Footer -->
 
