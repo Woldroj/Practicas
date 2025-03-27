@@ -91,7 +91,28 @@ $(document).ready(function() {
                 .click(function() {
                     restoreAll(); 
                 });
+
+            $('#Contra').click(function(){
+                $('#Pacman').fadeOut();
+                $('#DonkyKong').fadeOut();
+                $('.Games-BoxCtr, .Games-BoxCtr p').fadeIn();
+            });
+
+            $('#Pacman').click(function(){
+                $('#Contra').fadeOut();
+                $('#DonkyKong').fadeOut();
+                $('.Games-BoxPac, .Games-BoxPac p').fadeIn();
+            });
+
+            $('#DonkyKong').click(function(){
+                $('#Contra').fadeOut();
+                $('#Pacman').fadeOut();
+                $('.Games-BoxDK, .Games-BoxDK p').fadeIn();
+            });
         });
+
+        
+
         // Show Racing Games
         $('.container-imageRc').click(function() {
             $('.GamesSection .Games .container-imageRt').hide();
@@ -110,6 +131,34 @@ $(document).ready(function() {
                 .appendTo('.GamesSection')
                 .click(function() {
                     restoreAll(); 
+                });
+
+                $('#F1').click(function(){
+                    $('#GranTurismo').fadeOut();
+                    $('#MarioKart').fadeOut();
+                    $('#NeedForSpeed').fadeOut();
+                    $('.Games-BoxF1, .Games-BoxF1 p').fadeIn();
+                });
+
+                $('#GranTurismo').click(function(){
+                    $('#F1').fadeOut();
+                    $('#MarioKart').fadeOut();
+                    $('#NeedForSpeed').fadeOut();
+                    $('.Games-BoxGT, .Games-BoxGT p').fadeIn();
+                });
+
+                $('#MarioKart').click(function(){
+                    $('#GranTurismo').fadeOut();
+                    $('#F1').fadeOut();
+                    $('#NeedForSpeed').fadeOut();
+                    $('.Games-BoxMK8, .Games-BoxMK8 p').fadeIn();
+                });
+
+                $('#NeedForSpeed').click(function(){
+                    $('#GranTurismo').fadeOut();
+                    $('#MarioKart').fadeOut();
+                    $('#F1').fadeOut();
+                    $('.Games-BoxNFS, .Games-BoxNFS p').fadeIn();
                 });
         });
         // Show Indie Games
@@ -131,6 +180,46 @@ $(document).ready(function() {
                 .click(function() {
                     restoreAll(); 
                 });
+
+                $('#Celeste').click(function(){
+                    $('#HollowKnight').fadeOut();
+                    $('#HotlineMiami').fadeOut();
+                    $('#StardewValley').fadeOut();
+                    $('#Witness').fadeOut();
+                    $('.Games-BoxClst, .Games-BoxClst p').fadeIn();
+                });
+
+                $('#HollowKnight').click(function(){
+                    $('#Celeste').fadeOut();
+                    $('#HotlineMiami').fadeOut();
+                    $('#StardewValley').fadeOut();
+                    $('#Witness').fadeOut();
+                    $('.Games-BoxHK, .Games-BoxHK p').fadeIn();
+                });
+
+                $('#HotlineMiami').click(function(){
+                    $('#Celeste').fadeOut();
+                    $('#HollowKnight').fadeOut();
+                    $('#StardewValley').fadeOut();
+                    $('#Witness').fadeOut();
+                    $('.Games-BoxHM, .Games-BoxHM p').fadeIn();
+                });
+
+                $('#StardewValley').click(function(){
+                    $('#Celeste').fadeOut();
+                    $('#HotlineMiami').fadeOut();
+                    $('#HollowKnight').fadeOut();
+                    $('#Witness').fadeOut();
+                    $('.Games-BoxSV, .Games-BoxSV p').fadeIn();
+                });
+
+                $('#Witness').click(function(){
+                    $('#Celeste').fadeOut();
+                    $('#HotlineMiami').fadeOut();
+                    $('#StardewValley').fadeOut();
+                    $('#HollowKnight').fadeOut();
+                    $('.Games-BoxWtns, .Games-BoxWtns p').fadeIn();
+                });
         });
         // Show Strategy Games
         $('.container-imageSt').click(function() {
@@ -150,6 +239,24 @@ $(document).ready(function() {
                 .appendTo('.GamesSection')
                 .click(function() {
                     restoreAll(); 
+                });
+
+                $('#AgeOfEmpire2').click(function(){
+                    $('#Starcraft2').fadeOut();
+                    $('#XCOM').fadeOut();
+                    $('.Games-BoxAOE2, .Games-BoxAOE2 p').fadeIn();
+                });
+
+                $('#Starcraft2').click(function(){
+                    $('#AgeOfEmpire2').fadeOut();
+                    $('#XCOM').fadeOut();
+                    $('.Games-BoxStcrft2, .Games-BoxStcrft2 p').fadeIn();
+                });
+
+                $('#XCOM').click(function(){
+                    $('#Starcraft2').fadeOut();
+                    $('#AgeOfEmpire2').fadeOut();
+                    $('.Games-BoxXCOM, .Games-BoxXCOM p').fadeIn();
                 });
         });
         // Show Shooter Games
@@ -171,6 +278,46 @@ $(document).ready(function() {
                 .click(function() {
                     restoreAll(); 
                 });
+
+                $('#CallOfDuty').click(function(){
+                    $('#Doom').fadeOut();
+                    $('#Fortnite').fadeOut();
+                    $('#Overwatch2').fadeOut();
+                    $('#RainbowSixSiege').fadeOut();
+                    $('.Games-BoxCOD, .Games-BoxCOD p').fadeIn();
+                });
+
+                $('#Doom').click(function(){
+                    $('#CallOfDuty').fadeOut();
+                    $('#Fortnite').fadeOut();
+                    $('#Overwatch2').fadeOut();
+                    $('#RainbowSixSiege').fadeOut();
+                    $('.Games-BoxDoom, .Games-BoxDoom p').fadeIn();
+                });
+
+                $('#Fortnite').click(function(){
+                    $('#Doom').fadeOut();
+                    $('#CallOfDuty').fadeOut();
+                    $('#Overwatch2').fadeOut();
+                    $('#RainbowSixSiege').fadeOut();
+                    $('.Games-BoxFrt, .Games-BoxFrt p').fadeIn();
+                });
+
+                $('#Overwatch2').click(function(){
+                    $('#Doom').fadeOut();
+                    $('#Fortnite').fadeOut();
+                    $('#CallOfDuty').fadeOut();
+                    $('#RainbowSixSiege').fadeOut();
+                    $('.Games-BoxOvwtch2, .Games-BoxOvwtch2 p').fadeIn();
+                });
+
+                $('#RainbowSixSiege').click(function(){
+                    $('#Doom').fadeOut();
+                    $('#Fortnite').fadeOut();
+                    $('#Overwatch2').fadeOut();
+                    $('#CallOfDuty').fadeOut();
+                    $('.Games-BoxRSS, .Games-BoxRSS p').fadeIn();
+                });
         });
         // Show Adventure Games
         $('.container-imageAd').click(function() {
@@ -190,6 +337,34 @@ $(document).ready(function() {
                 .appendTo('.GamesSection')
                 .click(function() {
                     restoreAll(); 
+                });
+
+                $('#RedDeadDemption2').click(function(){
+                    $('#TheWitcher3').fadeOut();
+                    $('#TheLastOfUs2').fadeOut();
+                    $('#Uncharted4').fadeOut();
+                    $('.Games-BoxRDD2, .Games-BoxRDD2 p').fadeIn();
+                });
+
+                $('#TheWitcher3').click(function(){
+                    $('#RedDeadDemption2').fadeOut();
+                    $('#TheLastOfUs2').fadeOut();
+                    $('#Uncharted4').fadeOut();
+                    $('.Games-BoxTW3, .Games-BoxTW3 p').fadeIn();
+                });
+
+                $('#TheLastOfUs2').click(function(){
+                    $('#TheWitcher3').fadeOut();
+                    $('#RedDeadDemption2').fadeOut();
+                    $('#Uncharted4').fadeOut();
+                    $('.Games-BoxTLOU2, .Games-BoxTLOU2 p').fadeIn();
+                });
+
+                $('#Uncharted4').click(function(){
+                    $('#TheWitcher3').fadeOut();
+                    $('#TheLastOfUs2').fadeOut();
+                    $('#RedDeadDemption2').fadeOut();
+                    $('.Games-BoxUchrt4, .Games-BoxUchrt4 p').fadeIn();
                 });
         });
         // Show Fighting Games
@@ -211,6 +386,24 @@ $(document).ready(function() {
                 .click(function() {
                     restoreAll(); 
                 });
+
+                $('#MortalKombatXI').click(function(){
+                    $('#StreetFighterV').fadeOut();
+                    $('#Tekken7').fadeOut();
+                    $('.Games-BoxMK, .Games-BoxMK p').fadeIn();
+                });
+
+                $('#StreetFighterV').click(function(){
+                    $('#MortalKombatXI').fadeOut();
+                    $('#Tekken7').fadeOut();
+                    $('.Games-BoxSFV, .Games-BoxSFV p').fadeIn();
+                });
+
+                $('#Tekken7').click(function(){
+                    $('#StreetFighterV').fadeOut();
+                    $('#MortalKombatXI').fadeOut();
+                    $('.Games-BoxTK7, .Games-BoxTK7 p').fadeIn();
+                });
         });
         // Show Terror Games
         $('.container-imageT').click(function() {
@@ -231,6 +424,60 @@ $(document).ready(function() {
                 .click(function() {
                     restoreAll(); 
                 });
+
+                $('#Amnesia').click(function(){
+                    $('#BlairWitch').fadeOut();
+                    $('#Outlast').fadeOut();
+                    $('#PT').fadeOut();
+                    $('#ResidentEvil2').fadeOut();
+                    $('#SilentHill2').fadeOut();
+                    $('.Games-BoxAmn, .Games-BoxAmn p').fadeIn();
+                });
+
+                $('#BlairWitch').click(function(){
+                    $('#Amnesia').fadeOut();
+                    $('#Outlast').fadeOut();
+                    $('#PT').fadeOut();
+                    $('#ResidentEvil2').fadeOut();
+                    $('#SilentHill2').fadeOut();
+                    $('.Games-BoxBW, .Games-BoxBW p').fadeIn();
+                });
+
+                $('#Outlast').click(function(){
+                    $('#BlairWitch').fadeOut();
+                    $('#Amnesia').fadeOut();
+                    $('#PT').fadeOut();
+                    $('#ResidentEvil2').fadeOut();
+                    $('#SilentHill2').fadeOut();
+                    $('.Games-BoxOT, .Games-BoxOT p').fadeIn();
+                });
+
+                $('#PT').click(function(){
+                    $('#BlairWitch').fadeOut();
+                    $('#Outlast').fadeOut();
+                    $('#Amnesia').fadeOut();
+                    $('#ResidentEvil2').fadeOut();
+                    $('#SilentHill2').fadeOut();
+                    $('.Games-BoxPT, .Games-BoxPT p').fadeIn();
+                });
+
+                $('#ResidentEvil2').click(function(){
+                    $('#BlairWitch').fadeOut();
+                    $('#Outlast').fadeOut();
+                    $('#PT').fadeOut();
+                    $('#Amnesia').fadeOut();
+                    $('#SilentHill2').fadeOut();
+                    $('.Games-BoxRE2, .Games-BoxRE2 p').fadeIn();
+                });
+
+                $('#SilentHill2').click(function(){
+                    $('#BlairWitch').fadeOut();
+                    $('#Outlast').fadeOut();
+                    $('#PT').fadeOut();
+                    $('#ResidentEvil2').fadeOut();
+                    $('#Amnesia').fadeOut();
+                    $('.Games-BoxSH2, .Games-BoxSH2 p').fadeIn();
+                });
         });
         // Show Graphic Novel Games
         $('.container-imageGN').click(function() {
@@ -250,6 +497,34 @@ $(document).ready(function() {
                 .appendTo('.GamesSection')
                 .click(function() {
                     restoreAll(); 
+                });
+
+                $('#LifeIsStrange').click(function(){
+                    $('#NightInTheWoods').fadeOut();
+                    $('#UntilThen').fadeOut();
+                    $('#Oxenfree').fadeOut();
+                    $('.Games-BoxLIS, .Games-BoxLIS p').fadeIn();
+                });
+
+                $('#NightInTheWoods').click(function(){
+                    $('#LifeIsStrange').fadeOut();
+                    $('#UntilThen').fadeOut();
+                    $('#Oxenfree').fadeOut();
+                    $('.Games-BoxNITW, .Games-BoxNITW p').fadeIn();
+                });
+
+                $('#UntilThen').click(function(){
+                    $('#NightInTheWoods').fadeOut();
+                    $('#LifeIsStrange').fadeOut();
+                    $('#Oxenfree').fadeOut();
+                    $('.Games-BoxUT, .Games-BoxUT p').fadeIn();
+                });
+
+                $('#Oxenfree').click(function(){
+                    $('#NightInTheWoods').fadeOut();
+                    $('#UntilThen').fadeOut();
+                    $('#LifeIsStrange').fadeOut();
+                    $('.Games-BoxOxn, .Games-BoxOxn p').fadeIn();
                 });
         });
     }
@@ -374,7 +649,7 @@ function hideButtons() {
     document.querySelectorAll('.hero-btn').forEach(btn => btn.style.display = 'none');
 }
 
-// Menu hamburguesa
+// Menu hamburguer
 
 document.getElementById('menu-toggle').addEventListener('click', function() {
     const menu = document.getElementById('menu');
@@ -445,6 +720,23 @@ let carrito = [];
             $(".buy-section").hide();
         }
 
+        function clearCart() {
+            carrito = [];
+            actualizarCarrito();
+
+            document.getElementById("credit-card").value = "";
+            document.getElementById("date").value = "";
+            document.getElementById("cvv").value = "";
+            document.getElementById("giftemail").value = "";
+            document.getElementById("giftEmail").value = "";
+            document.getElementById("conditions").checked = false;
+
+            document.getElementById('giftForm').classList.add('hidden'); 
+            document.getElementById('giftemail').classList.remove('hidden'); 
+            document.querySelector('button.paid').classList.remove('hidden'); 
+            document.querySelector('button.gift').classList.remove('hidden');
+        }
+
         function paidComplete() {
             const card = document.getElementById('credit-card').value;
             const date = document.getElementById('date').value;
@@ -458,7 +750,7 @@ let carrito = [];
 
             alert('Compra completada con éxito!');
             document.querySelector('.buy-section').style.display = 'none'; 
-
+            clearCart();
         }
 
         function buyForGift() {
@@ -495,7 +787,9 @@ let carrito = [];
             }
 
             alert(`Compra confirmada para regalo. Se enviará a: ${giftEmail}`);
-            document.querySelector('.buy-section').style.display = 'none'; 
+            document.querySelector('.buy-section').style.display = 'none';
+            clearCart();
+
         }
 
         function validateCVV(input) {
@@ -544,6 +838,7 @@ let carrito = [];
             document.getElementById('date').classList.remove('hidden');
             document.getElementById('cvv').classList.remove('hidden');
             document.getElementById('conditions').classList.remove('hidden');
+            document.querySelector('.conditions-text').style.display = 'flex';
             document.querySelector('button.paid').classList.remove('hidden');
             document.querySelector('button.gift').classList.remove('hidden');
             document.querySelector('button.cancel').classList.remove('hidden');

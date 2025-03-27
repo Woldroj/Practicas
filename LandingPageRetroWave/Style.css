@@ -281,7 +281,8 @@ header nav .cart {
     border-radius: 5%;
 }
 
-.container-imageRt, .container-imageRc, .container-imageI, .container-imageSt, .container-imageSh, .container-imageAd, .container-imageF, .container-imageT, .container-imageGN {
+.container-imageRt, .container-imageRc, .container-imageI, .container-imageSt, .container-imageSh, .container-imageAd, 
+.container-imageF, .container-imageT, .container-imageGN {
     position: relative;
     width: 300px; 
     height: 170px; 
@@ -296,6 +297,39 @@ header nav .cart {
     align-items: stretch; 
     gap: 10px;
     width: 1000px; 
+}
+
+.Games-BoxCtr, .Games-BoxPac, .Games-BoxDK, 
+.Games-BoxF1, .Games-BoxGT, .Games-BoxMK8, .Games-BoxNFS,
+.Games-BoxClst, .Games-BoxHK, .Games-BoxHM, .Games-BoxSV, .Games-BoxWtns,
+.Games-BoxAOE2, .Games-BoxStcrft2, .Games-BoxXCOM,
+.Games-BoxCOD, .Games-BoxDoom, .Games-BoxFrt, .Games-BoxOvwtch2, .Games-BoxRSS,
+.Games-BoxRDD2, .Games-BoxTW3, .Games-BoxTLOU2, .Games-BoxUchrt4,
+.Games-BoxMK, .Games-BoxSFV, .Games-BoxTK7,
+.Games-BoxAmn, .Games-BoxBW, .Games-BoxOT, .Games-BoxPT, .Games-BoxRE2, .Games-BoxSH2,
+.Games-BoxLIS, .Games-BoxNITW, .Games-BoxUT, .Games-BoxOxn {
+    display: none;
+    position: relative;
+    width: 100%;
+    margin-right: 15%;
+    padding: 20px;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 255, 255, 0.4);
+}
+
+.Games-BoxCtr p, .Games-BoxPac p, .Games-BoxDK p, 
+.Games-BoxF1 p, .Games-BoxGT p, .Games-BoxMK8 p, .Games-BoxNFS p,
+.Games-BoxClst p, .Games-BoxHK p, .Games-BoxHM p, .Games-BoxSV p, .Games-BoxWtns p,
+.Games-BoxAOE2 p, .Games-BoxStcrft2 p, .Games-BoxXCOM p, 
+.Games-BoxCOD p, .Games-BoxDoom p, .Games-BoxFrt p, .Games-BoxOvwtch2 p, .Games-BoxRSS p,
+.Games-BoxRDD2 p, .Games-BoxTW3 p, .Games-BoxTLOU2 p, .Games-BoxUchrt4 p,
+.Games-BoxMK p, .Games-BoxSFV p, .Games-BoxTK7 p,
+.Games-BoxAmn p, .Games-BoxBW p, .Games-BoxOT p, .Games-BoxPT p, .Games-BoxRE2 p, .Games-BoxSH2 p,
+.Games-BoxLIS p, .Games-BoxNITW p, .Games-BoxUT p, .Games-BoxOxn p {
+    display: none;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size:x-large;
 }
 
 .image-box {
