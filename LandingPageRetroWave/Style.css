@@ -311,7 +311,7 @@ header nav .cart {
     display: none;
     position: relative;
     width: 100%;
-    margin-right: 15%;
+    
     padding: 20px;
     background: rgba(0, 0, 0, 0.7);
     border-radius: 10px;
@@ -984,7 +984,6 @@ button:disabled {
     .Games-BoxAmn, .Games-BoxBW, .Games-BoxOT, .Games-BoxPT, .Games-BoxRE2, .Games-BoxSH2,
     .Games-BoxLIS, .Games-BoxNITW, .Games-BoxUT, .Games-BoxOxn {
         width: 30%;
-        margin-left: 15%;
     }
 
     .buy-section {
