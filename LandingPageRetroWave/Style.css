@@ -892,6 +892,14 @@ button:disabled {
         object-fit: cover;
     }
 
+    .modal {
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.8);
+        justify-content: center;
+        align-items: center;
+    }
+
     .extends-information p {
         font-family: Cambria;
         font-size: 15px;
@@ -977,5 +985,15 @@ button:disabled {
     .Games-BoxLIS, .Games-BoxNITW, .Games-BoxUT, .Games-BoxOxn {
         width: 30%;
         margin-left: 15%;
+    }
+
+    .buy-section {
+        width:80%;
+        height: auto;
+        left: 5%;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(0, 0, 0);
+        box-shadow: 0 0 50px 1000px rgba(0, 0, 0, 0.5);
     }
 }
