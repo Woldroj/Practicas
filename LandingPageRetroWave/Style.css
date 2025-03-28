@@ -930,7 +930,7 @@ button:disabled {
     }
 
     .image-box {
-        width: 205px;
+        width: 50%;
     }
 
     .imagesRt, .imagesRc, .imagesI, .imagesSt, .imagesSh, .imagesAd, .imagesF, .imagesT, .imagesGN {
@@ -940,5 +940,18 @@ button:disabled {
     .social-links {
         flex-direction: column;
         gap: 5px;
+    }
+
+    .Games-BoxCtr, .Games-BoxPac, .Games-BoxDK, 
+    .Games-BoxF1, .Games-BoxGT, .Games-BoxMK8, .Games-BoxNFS,
+    .Games-BoxClst, .Games-BoxHK, .Games-BoxHM, .Games-BoxSV, .Games-BoxWtns,
+    .Games-BoxAOE2, .Games-BoxStcrft2, .Games-BoxXCOM,
+    .Games-BoxCOD, .Games-BoxDoom, .Games-BoxFrt, .Games-BoxOvwtch2, .Games-BoxRSS,
+    .Games-BoxRDD2, .Games-BoxTW3, .Games-BoxTLOU2, .Games-BoxUchrt4,
+    .Games-BoxMK, .Games-BoxSFV, .Games-BoxTK7,
+    .Games-BoxAmn, .Games-BoxBW, .Games-BoxOT, .Games-BoxPT, .Games-BoxRE2, .Games-BoxSH2,
+    .Games-BoxLIS, .Games-BoxNITW, .Games-BoxUT, .Games-BoxOxn {
+        width: 50%;
+        margin-left: 15%;
     }
 }
