@@ -294,7 +294,7 @@ header nav .cart {
 .imagesRt, .imagesRc, .imagesI, .imagesSt, .imagesSh, .imagesAd, .imagesF, .imagesT, .imagesGN {
     display: flex;
     flex-direction: column; 
-    align-items: stretch; 
+    align-items: center; 
     gap: 10px;
     width: 1000px; 
 }
@@ -930,7 +930,31 @@ button:disabled {
     }
 
     .image-box {
-        width: 50%;
+        display: flex;
+        align-items: center; /* Centra verticalmente */
+        justify-content: space-between; /* Espacia bien los elementos */
+        background-color: #666; /* Ajusta el color si es necesario */
+        padding: 10px;
+        margin: 10px;
+        width:350px;
+        border-radius: 10px;
+    }
+
+    .image-box img {
+        width: 80px; /* Tamaño fijo para las imágenes */
+        height: 80px;
+        border-radius: 10px;
+        object-fit: cover; /* Evita que se deformen */
+    }
+
+    .image-box .compra {
+        font-size: 16px;
+        color: white;
+        background: purple;
+        padding: 5px 10px;
+        border-radius: 5px;
+        text-align: center;
+        min-width: 50px; /* Tamaño fijo */
     }
 
     .imagesRt, .imagesRc, .imagesI, .imagesSt, .imagesSh, .imagesAd, .imagesF, .imagesT, .imagesGN {
@@ -951,7 +975,7 @@ button:disabled {
     .Games-BoxMK, .Games-BoxSFV, .Games-BoxTK7,
     .Games-BoxAmn, .Games-BoxBW, .Games-BoxOT, .Games-BoxPT, .Games-BoxRE2, .Games-BoxSH2,
     .Games-BoxLIS, .Games-BoxNITW, .Games-BoxUT, .Games-BoxOxn {
-        width: 50%;
+        width: 30%;
         margin-left: 15%;
     }
 }
